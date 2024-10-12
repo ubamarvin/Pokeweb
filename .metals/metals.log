@@ -1,0 +1,10 @@
+2024.10.12 18:26:18 INFO  Started: Metals version 1.3.5 in folders '/home/marvin/WebApp/pokeweb' for client Visual Studio Code 1.91.1.
+SLF4J(W): Class path contains multiple SLF4J providers.
+SLF4J(W): Found provider [scribe.slf4j.ScribeServiceProvider@1aa9734a]
+SLF4J(W): Found provider [ch.qos.logback.classic.spi.LogbackServiceProvider@2decffe]
+SLF4J(W): See https://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J(I): Actual provider is of type [scribe.slf4j.ScribeServiceProvider@1aa9734a]
+2024.10.12 18:26:19 WARN  Flyway upgrade recommended: H2 2.3.230 is newer than this version of Flyway and support has not been tested. The latest supported version of H2 is 2.2.220.
+2024.10.12 18:27:41 INFO  no build target found for /home/marvin/WebApp/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.10.12 18:27:58 INFO  no build target found for /home/marvin/WebApp/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.10.12 18:28:53 INFO  no build target found for /home/marvin/WebApp/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.3
