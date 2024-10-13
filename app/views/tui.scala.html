@@ -1,0 +1,9 @@
+@(tuiOutput: String)
+@main("tui") {
+    <p>@tuiOutput</p>
+    <form action="@routes.HomeController.handleInput" method="post">
+        <label for="input">Type in the name of the Pokémon you wish to add to your team:</label>
+        <input type="text" id="input" name="input" placeholder="Enter Pokémon name" required />
+        <button type="submit">Add to Team</button>
+    </form>
+}

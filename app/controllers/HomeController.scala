@@ -23,8 +23,10 @@ class HomeController @Inject()(val controllerComponents: ControllerComponents) e
   * Routes for /Tui
   */
   def tui() = Action {
-  Ok(gameController.printDisplay)
+  Ok(views.html.tui(gameController.printDisplay))
   }
+
+  
 
   def handleInput: Action[AnyContent] = Action { implicit request =>
     val body = request.body.asFormUrlEncoded
@@ -33,14 +35,6 @@ class HomeController @Inject()(val controllerComponents: ControllerComponents) e
       gameController.handleInput(input)
       Redirect(routes.HomeController.tui())}.getOrElse(Ok("didnt receive input")) 
 }
-
-
-
-
-
-
-  
-
  
   /**
    * Create an Action to render an HTML page.
