@@ -3,10 +3,15 @@
 # https://www.playframework.com/documentation/latest/ScalaRouting
 GET     /                           controllers.HomeController.index()
 
+### Tui Routes
 GET /tui                            controllers.HomeController.tui()
 
 + nocsrf
 POST /tui                           controllers.HomeController.handleInput
+
+### Gui Routes
+
+GET /gui                            controllers.HomeController.gui()
 
 # Map static resources from the /public folder to the /assets URL path
 GET     /assets/*file               controllers.Assets.versioned(path="/public", file: Asset)

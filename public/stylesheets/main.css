@@ -25,13 +25,13 @@ body {
 }
 
 /* Not sure which blur was was*/
-.header {
+.header, .footer {
     background-color: rgb(0,0,0, 0.9);
-    opacity: 0.5;
+    opacity: 0.6;
     color: white;
     padding: 10px;
+    height: 7.5vh;
     text-align: left;
-    max-height: 10%;
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
 }
@@ -48,7 +48,12 @@ body {
     text-decoration: underline;
 }
 
+/* Tui, WebGui are in here */
 .content {
     flex: 1;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
