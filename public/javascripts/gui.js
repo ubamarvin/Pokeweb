@@ -1,3 +1,7 @@
+//This js should serve as the gui-layout-controller
+//its job is it to append and remove Elements
+
+
 
 //
 /**___Goal Architecture
@@ -27,6 +31,7 @@ function updateWebGui(state) {
     // Identify which to which state
     
     //delegate accordingly
+    // from to is unnötig "main" sufficec
     if ( state === "main_to_attack")
         mainToAttack()
     if ( state === "attack_to_main")
