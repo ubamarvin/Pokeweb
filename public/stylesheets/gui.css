@@ -21,6 +21,15 @@
     }
 }
 
+/* for all my hidden and dynamically appended Elements
+ !important because else elements with additional display settings
+ such as grid or flex wouldnt be hidden */
+.hidden {
+    display: none !important;
+}
+
+/*Start of gui layout*/
+
 .gui-container {
     padding: var(--container-padding);
     background-color: rgb(0,0,0);
