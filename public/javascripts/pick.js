@@ -1,11 +1,11 @@
 // main
 
-const createPickLayout = () => {
-    const pick = document.createElement("div");
-    pick.textContent= "Pick State"
+export const createPickLayout = () => {
+    const guiContainer = document.createElement("div");
+    guiContainer.classList.add('gui-container');
 
-    return pick;
+    //....
+
+    return guiContainer;
+
 };
-
-// Export the function
-export const createPickLayoutHtml = createPickLayout;

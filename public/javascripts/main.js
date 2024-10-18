@@ -1,71 +1,77 @@
+//main.js
 
-const createMainLayout = () => {
-    // Create main container for poke-layer and info-layer
-    const choiceBox = document.createElement("div");
+import { fakeServer } from "./fakeServer.js";
 
-    // Poke-layer
-    const pokeLayer = document.createElement("div");
-    pokeLayer.classList.add("poke-layer");
+let currentInfoLayout
 
-    // Top row - opponent Pokémon
-    const topRow = document.createElement("div");
-    topRow.classList.add("top-row");
+export const createMainLayout = () => {
+    const guiContainer = document.createElement("div");
+    guiContainer.classList.add('gui-container');
 
-    const opImageBox = document.createElement("div");
-    opImageBox.classList.add("op-image-box");
+    const pokeLayer = document.createElement('div');
+    pokeLayer.classList.add('poke-layer');
 
-    const opPkImg = document.createElement("img");
-    opPkImg.classList.add("pk-sprite");
-    opPkImg.id = "op-pk";
-    opPkImg.src = "https://img.pokemondb.net/sprites/silver/normal/weezing.png";
-    opPkImg.alt = "Weezing";
-
-    opImageBox.appendChild(opPkImg);
+    const topRow = document.createElement('div');
+    topRow.classList.add('top-row');
+    const opImageBox = document.createElement('div');
+    opImageBox.classList.add('op-image-box');
+    const opImage = document.createElement('img');
+    opImage.classList.add('pk-sprite');
+    opImage.id = 'op-pk';
+    opImage.src = 'https://img.pokemondb.net/sprites/silver/normal/weezing.png';
+    opImage.alt = 'Weezing';
+    opImageBox.appendChild(opImage);
     topRow.appendChild(opImageBox);
 
-    // Bottom row - player Pokémon
-    const botRow = document.createElement("div");
-    botRow.classList.add("bot-row");
-
-    const plImageBox = document.createElement("div");
-    plImageBox.classList.add("pl-image-box");
-
-    const plPkImg = document.createElement("img");
-    plPkImg.classList.add("pk-sprite");
-    plPkImg.id = "pl-pk";
-    plPkImg.src = "https://img.pokemondb.net/sprites/silver/normal/weezing.png";
-    plPkImg.alt = "Weezing";
-
-    plImageBox.appendChild(plPkImg);
+    // Bottom row with player image
+    const botRow = document.createElement('div');
+    botRow.classList.add('bot-row');
+    const plImageBox = document.createElement('div');
+    plImageBox.classList.add('pl-image-box');
+    const plImage = document.createElement('img');
+    plImage.classList.add('pk-sprite');
+    plImage.id = 'pl-pk';
+    plImage.src = 'https://img.pokemondb.net/sprites/silver/normal/weezing.png';
+    plImage.alt = 'Weezing';
+    plImageBox.appendChild(plImage);
     botRow.appendChild(plImageBox);
 
-    // Append both rows to pokeLayer
+    // Append rows to poke-layer
     pokeLayer.appendChild(topRow);
     pokeLayer.appendChild(botRow);
 
-    // Info-layer
-    const infoLayer = document.createElement("div");
-    infoLayer.classList.add("info-layer");
 
-    const roundMsg = document.createElement("div");
-    roundMsg.classList.add("round-msg");
-    roundMsg.textContent = "What Will you do";
+    //Move into its own function
+    // Create the info-layer
+    const infoLayer = document.createElement('div');
+    infoLayer.classList.add('info-layer');
+    currentInfoLayout = infoLayer;
 
-    const choiceButtons = document.createElement("div");
-    choiceButtons.classList.add("choice-buttons");
+    // Round message
+    const roundMsg = document.createElement('div');
+    roundMsg.classList.add('round-msg');
+    roundMsg.textContent = 'What Will you do';
 
-    const attackBtn = document.createElement("div");
-    attackBtn.classList.add("attack-btn");
-    attackBtn.textContent = "Attack";
+    // Choice buttons
+    const choiceButtons = document.createElement('div');
+    choiceButtons.classList.add('choice-buttons');
 
-    const itemsBtn = document.createElement("div");
-    itemsBtn.textContent = "Items";
+    const attackBtn = document.createElement('div');
+    attackBtn.classList.add('attack-btn');
+    attackBtn.textContent = 'Attack';
 
-    const switchBtn = document.createElement("div");
-    switchBtn.textContent = "Switch";
+    attackBtn.addEventListener("click", () => {
+        fakeServer.receiveString("attack");
+    })
 
-    const runBtn = document.createElement("div");
-    runBtn.textContent = "Run";
+    const itemsBtn = document.createElement('div');
+    itemsBtn.textContent = 'Items';
+
+    const switchBtn = document.createElement('div');
+    switchBtn.textContent = 'Switch';
+
+    const runBtn = document.createElement('div');
+    runBtn.textContent = 'Run';
 
     // Append buttons to choiceButtons container
     choiceButtons.appendChild(attackBtn);
@@ -77,12 +83,26 @@ const createMainLayout = () => {
     infoLayer.appendChild(roundMsg);
     infoLayer.appendChild(choiceButtons);
 
-    // Append pokeLayer and infoLayer to choiceBox (the main container)
-    choiceBox.appendChild(pokeLayer);
-    choiceBox.appendChild(infoLayer);
+    // Append pokeLayer and infoLayer to guiContainer
+    guiContainer.appendChild(pokeLayer);
+    guiContainer.appendChild(infoLayer);
 
-    return choiceBox;
+    return guiContainer;
 };
 
-// Export the function
-export const createMainLayoutHtml = createMainLayout;
+export const updateInfoToAttack = () => {
+    currentInfoLayout.textContent ="";
+}
+/*
+export const updateInfoToSwitch = () => {
+
+}
+
+export const updateInfoToItem = () => {
+
+}
+
+export const updateInfoToMain = () => {
+
+}
+*/
