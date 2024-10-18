@@ -13,6 +13,11 @@ export const createMainLayout = () => {
 
     const topRow = document.createElement('div');
     topRow.classList.add('top-row');
+
+    const opStatusBox = document.createElement("div");
+    opStatusBox.classList.add("status");
+    topRow.appendChild(opStatusBox);
+
     const opImageBox = document.createElement('div');
     opImageBox.classList.add('op-image-box');
     const opImage = document.createElement('img');
@@ -36,6 +41,11 @@ export const createMainLayout = () => {
     plImageBox.appendChild(plImage);
     botRow.appendChild(plImageBox);
 
+    const plStatusBox = document.createElement("div");
+    plStatusBox.classList.add("status");
+    plStatusBox.classList.add("status-pl");
+    botRow.appendChild(plStatusBox);
+
     // Append rows to poke-layer
     pokeLayer.appendChild(topRow);
     pokeLayer.appendChild(botRow);
@@ -46,6 +56,9 @@ export const createMainLayout = () => {
     const infoLayer = document.createElement('div');
     infoLayer.classList.add('info-layer');
     currentInfoLayout = infoLayer;
+
+
+
 
     // Round message
     const roundMsg = document.createElement('div');
@@ -59,16 +72,21 @@ export const createMainLayout = () => {
     const attackBtn = document.createElement('div');
     attackBtn.classList.add('attack-btn');
     attackBtn.textContent = 'Attack';
-
     attackBtn.addEventListener("click", () => {
         fakeServer.receiveString("attack");
     })
 
     const itemsBtn = document.createElement('div');
     itemsBtn.textContent = 'Items';
+    itemsBtn.addEventListener("click", () => {
+        fakeServer.receiveString("item");
+    })
 
     const switchBtn = document.createElement('div');
     switchBtn.textContent = 'Switch';
+    switchBtn.addEventListener("click", () => {
+        fakeServer.receiveString("switch");
+    })
 
     const runBtn = document.createElement('div');
     runBtn.textContent = 'Run';
@@ -90,19 +108,79 @@ export const createMainLayout = () => {
     return guiContainer;
 };
 
+
+//____Button to get back to main layout
+const backBtn = document.createElement("div");
+    backBtn.classList.add("back-btn")
+    backBtn.addEventListener("click", () => {
+        currentInfoLayout.textContent="";
+        fakeServer.receiveString("main-box")
+    })
+
 export const updateInfoToAttack = () => {
     currentInfoLayout.textContent ="";
+    
+    currentInfoLayout.appendChild(backBtn);
 }
-/*
 export const updateInfoToSwitch = () => {
+    currentInfoLayout.textContent="";
+    const switchBox = document.createElement("div");
+    switchBox.classList.add("switch-box");
+    currentInfoLayout.appendChild(switchBox);
 
+    currentInfoLayout.appendChild(backBtn);
 }
+
 
 export const updateInfoToItem = () => {
-
+    currentInfoLayout.textContent="";
+    const itemBox = document.createElement("div");
+    itemBox.classList.add("item-box");
+    currentInfoLayout.appendChild(itemBox);
+    currentInfoLayout.appendChild(backBtn);
 }
 
 export const updateInfoToMain = () => {
+    currentInfoLayout.textContent="";
+
+    const roundMsg = document.createElement('div');
+    roundMsg.classList.add('round-msg');
+    roundMsg.textContent = 'What Will you do';
+
+    // Choice buttons
+    const choiceButtons = document.createElement('div');
+    choiceButtons.classList.add('choice-buttons');
+
+    const attackBtn = document.createElement('div');
+    attackBtn.classList.add('attack-btn');
+    attackBtn.textContent = 'Attack';
+    attackBtn.addEventListener("click", () => {
+        fakeServer.receiveString("attack");
+    })
+
+    const itemsBtn = document.createElement('div');
+    itemsBtn.textContent = 'Items';
+    itemsBtn.addEventListener("click", () => {
+        fakeServer.receiveString("item");
+    })
+
+    const switchBtn = document.createElement('div');
+    switchBtn.textContent = 'Switch';
+    switchBtn.addEventListener("click", () => {
+        fakeServer.receiveString("switch");
+    })
+
+    const runBtn = document.createElement('div');
+    runBtn.textContent = 'Run';
+
+    // Append buttons to choiceButtons container
+    choiceButtons.appendChild(attackBtn);
+    choiceButtons.appendChild(itemsBtn);
+    choiceButtons.appendChild(switchBtn);
+    choiceButtons.appendChild(runBtn);
+
+    // Append roundMsg and choiceButtons to infoLayer
+    currentInfoLayout.appendChild(roundMsg);
+    currentInfoLayout.appendChild(choiceButtons);
 
 }
-*/

@@ -16,9 +16,11 @@
  */
 //gui.js
 import { createPickLayout } from "./pick.js"
-import { createMainLayout, updateInfoToAttack } from "./main.js"
+import { createDeadLayout} from "./dead.js"
+import { createMainLayout, updateInfoToAttack, updateInfoToItem, updateInfoToMain, updateInfoToSwitch } from "./main.js"
 
 import { fakeServer } from "./fakeServer.js"
+
 
 const gui_container = document.querySelector(".root")
 
@@ -27,11 +29,35 @@ const gui_container = document.querySelector(".root")
 
 
 const renderPickState = () => {
-    gui_container.appendChild(createPickLayout())
+    gui_container.textContent="";
+    gui_container.appendChild(createPickLayout());
 }
 
 const renderMainLayout = () => {
-    gui_container.appendChild(createMainLayout())
+    gui_container.textContent="";
+    gui_container.appendChild(createMainLayout());
+}
+
+const renderDeadLayout = () => {
+    gui_container.textContent="";
+    gui_container.appendChild(createDeadLayout());
+}
+
+const updateGui = (state) => {
+    if (state === "pick")
+        renderPickState()
+    if (state === "main")
+        renderMainLayout()
+    if (state === "attack")
+        updateInfoToAttack()
+    if (state === "switch")
+        updateInfoToSwitch()
+    if (state === "item")
+        updateInfoToItem()
+    if (state === "main-box")
+        updateInfoToMain()
+    if (state === "dead")
+        renderDeadLayout()
 }
 
 //
@@ -45,7 +71,7 @@ const startPolling = () => {
         if (currentState !== previousState) {
             console.log("State has changed:", currentState); // Log if there's a change
             previousState = currentState; // Update the previous state
-            updateInfoToAttack()
+            updateGui(currentState);
         }
     }, 500); // Adjust polling frequency as needed
 };
@@ -53,5 +79,5 @@ const startPolling = () => {
 startPolling();
 
 renderMainLayout()
-
+//renderDeadLayout()
 //renderPickState()

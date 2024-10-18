@@ -52,6 +52,7 @@
     border: white solid 2px;
 }
 
+/* (Main/Attack/Switch/Item) State
 /*_____Layer 1_________*/
 .poke-layer {
    display: grid;
@@ -70,6 +71,18 @@ https://www.w3schools.com/css/css_positioning.asp
     height: 100%; 
 }
 
+.status {
+    position: absolute;
+    width: 40%;
+    height: 40%;
+    background-color: red;
+}
+
+.status-pl {
+    right: 0;
+    bottom: 50%;
+}
+
 .top-row {
     grid-row: 1;
 }
@@ -82,8 +95,8 @@ bot-row {
 .op-image-box,
 .pl-image-box {
     position: absolute;
-    width: fit-content;
-    height: fit-content;
+    width: auto;
+    height: auto;
     animation: moveUpDown 1s ease-in-out infinite; /* Animation properties */
 
 }
@@ -91,13 +104,25 @@ bot-row {
 .op-image-box {
     top: 30%;
     right: 10%;
+    animation-delay: 0s;
+}
+
+#op-pk {
+    width: 125%;
+    height: auto;
 }
 
 
 .pl-image-box {
     bottom: 45%;
     left: 10%;
+    animation-delay: 0.13s;
 }
+#pl-pk {
+    width: 200%;
+    height: auto;
+}
+
 
 /*
 The idea is that the gui consist of multiple layers
@@ -136,4 +161,23 @@ its parents containers padding is not respected */
     display: grid;
     grid-template: 1fr 1fr/ 1fr 1fr;
     border: black solid 5px;
+}
+/*Attack/Item/Switch back button */
+.back-btn {
+    height:10%;
+    width: 10%;
+    background-color: brown;
+}
+
+/*Switch State spec */
+
+.switch-box, 
+.item-box {
+    position: absolute;
+    background-color: aliceblue;
+    height: 300%;
+    width: 50%;
+    right: 0px;
+    bottom: 0px;
+    
 }
