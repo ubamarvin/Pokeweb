@@ -15,9 +15,9 @@
  * Html Object containing a Json body
  */
 //gui.js
-import { createPickLayout } from "./pick.js"
-import { createDeadLayout} from "./dead.js"
-import { createMainLayout, updateInfoToAttack, updateInfoToItem, updateInfoToMain, updateInfoToSwitch } from "./main.js"
+import { createPickLayout } from "./gui/pick.js"
+import { createDeadLayout} from "./gui/dead.js"
+import { createMainLayout, updateInfoToAttack, updateInfoToItem, updateInfoToMain, updateInfoToSwitch } from "./gui/main.js"
 
 import { fakeServer } from "./fakeServer.js"
 
