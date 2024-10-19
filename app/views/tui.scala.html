@@ -1,11 +1,15 @@
 @(tuiOutput: String)
 @main("tui") {
     <div class="tui-container">
-        <p>@tuiOutput</p>
+        <div class="output-container">
+            <p class="output-history"> </p>
+            <p class="output">@tuiOutput</p>
+        </div>
         <form action="@routes.HomeController.handleInput" method="post">
             <label for="input"></label>
             <input type="text" id="input" name="input"  />
-            <button type="submit">Enter</button>
+            <button class="btn" type="submit">Enter</button>
         </form>
     </div>
 }
+

@@ -15,9 +15,15 @@
  * Html Object containing a Json body
  */
 //gui.js
-import { createPickLayout } from "./gui/pick.js"
-import { createDeadLayout} from "./gui/dead.js"
-import { createMainLayout, updateInfoToAttack, updateInfoToItem, updateInfoToMain, updateInfoToSwitch } from "./gui/main.js"
+import { createPickLayout } from "./pick.js"
+import { createDeadLayout} from "./dead.js"
+import { 
+    createMainLayout,
+    updateInfoToAttack,
+    updateInfoToItem,
+    updateInfoToMain,
+    updateInfoToSwitch 
+    } from "./main.js"
 
 import { fakeServer } from "./fakeServer.js"
 
@@ -29,16 +35,22 @@ const gui_container = document.querySelector(".root")
 
 
 const renderPickState = () => {
+    if(gui_container === null)
+        return;
     gui_container.textContent="";
     gui_container.appendChild(createPickLayout());
 }
 
 const renderMainLayout = () => {
+    if(gui_container === null)
+        return;
     gui_container.textContent="";
     gui_container.appendChild(createMainLayout());
 }
 
 const renderDeadLayout = () => {
+    if(gui_container === null)
+        return;
     gui_container.textContent="";
     gui_container.appendChild(createDeadLayout());
 }
