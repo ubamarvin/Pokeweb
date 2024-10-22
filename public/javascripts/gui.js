@@ -25,9 +25,15 @@ import {
     updateInfoToSwitch 
     } from "./main.js"
 
-import { fakeServer } from "./fakeServer.js"
+//import { fakeServer } from "./fakeServer.js"
 import pokemonFetcher from "./pokemonFetcher.js"
+import jsonFetcher  from "./jsonFetcher.js"
 
+(async () => {
+    await jsonFetcher.fetchGameJson(); // Fetch the game JSON first
+    const type = jsonFetcher.gameData.state.type; // Access the type after fetching
+    console.log(type); // Now you can log or use the type
+})();
 
 const gui_container = document.querySelector(".root")
 
@@ -42,11 +48,11 @@ const renderPickState = () => {
     gui_container.appendChild(createPickLayout());
 }
 
-const renderMainLayout = () => {
+const renderMainLayout = (data) => {
     if(gui_container === null)
         return;
     gui_container.textContent="";
-    gui_container.appendChild(createMainLayout());
+    gui_container.appendChild(createMainLayout(data));
 }
 
 const renderDeadLayout = () => {
@@ -57,48 +63,58 @@ const renderDeadLayout = () => {
 }
 
 const updateGui = (state) => {
-    if (state === "pick")
+    //actually i do not have to pass
+    //the json file but i cant assure
+    //consitency of data
+    const data = jsonFetcher.gameData
+    if (state === "PickPokemonState")
         renderPickState()
-    if (state === "main")
-        renderMainLayout()
-    if (state === "attack")
+    if (state === "MainState")
+        renderMainLayout(data)
+    if (state === "ChooseAttackState")
         updateInfoToAttack()
-    if (state === "switch")
+    if (state === "BattleEvalState")
+    {}
+    if (state === "SwitchPokemonState")
         updateInfoToSwitch()
-    if (state === "item")
+    if (state === "ChooseItemState")
         updateInfoToItem()
     if (state === "main-box")
         updateInfoToMain()
-    if (state === "dead")
+    if (state === "YourDeadState")
         renderDeadLayout()
 }
 
 //
-const startPolling = () => {
-    let previousState = fakeServer.getState(); // Store the initial state
-
+const startPolling =  async () => {
+    //let previousState = fakeServer.getState(); // Store the initial state
+    let previousState = ""
     // Set an interval to check for changes every 500 ms
-    setInterval(() => {
-        const currentState = fakeServer.getState(); // Get the current state
-
+    setInterval(async () => {
+        await jsonFetcher.fetchGameJson(); // Get the current state
+        const currentState = jsonFetcher.gameData.state.type
         if (currentState !== previousState) {
             console.log("State has changed:", currentState); // Log if there's a change
             previousState = currentState; // Update the previous state
             updateGui(currentState);
         }
-    }, 500); // Adjust polling frequency as needed
+    }, 500);
 };
 
-//startPolling();
+
 
 //// Wait for Pokemon Fetcher Pokemonfetcher
+//// Since Pokefetcher only loads once it fetches the Data
+//// in its Module and is then exported
 (async function() {
     while(pokemonFetcher.loading) {
+        
         await new Promise(resolve => setTimeout(resolve, 500));
     }
     if (!pokemonFetcher.error) {
         startPolling();
-        renderMainLayout()
+        //renderMainLayout()
+        //console.log("neverreach")
     }else{
         gui_container.textContent="Error Loading"
     }

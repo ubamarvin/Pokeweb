@@ -5,13 +5,29 @@ import pokemonFetcher from "./pokemonFetcher.js"
 
 
 
+function findPokemonByName(pokemonFetcher, name) {
+    const foundPokemon = pokemonFetcher.results.find(pokemon => pokemon.name === name.toUpperCase());
 
+    if (foundPokemon) {
+        return foundPokemon; // 
+    } else {
+        return pokemonFetcher.results[0]; // give a mew as trostpreis
+    }
+}
 
 let currentInfoLayout
 
-export const createMainLayout = () => {
-    const playerMon = pokemonFetcher.results[0];
-    const opMon = pokemonFetcher.results[1];
+export const createMainLayout = (data) => {
+    ///Get Data from Json Object
+    //pokemonNames
+    const player1MonName = data.state.player.currentPokemon.name;
+    const player2MonName = data.state.opponent.currentPokemon.name;
+
+    
+    const player1Mon = findPokemonByName(pokemonFetcher, player1MonName)
+    const player2Mon = findPokemonByName(pokemonFetcher, player2MonName)
+    
+
     const guiContainer = document.createElement("div");
     guiContainer.classList.add('gui-container');
 
@@ -26,7 +42,7 @@ export const createMainLayout = () => {
     opStatusBox.classList.add("status-op");
 
     const opPkName = document.createElement("p");
-    opPkName.textContent = "Bisasam";
+    opPkName.textContent = player2MonName;
     const opHealth = document.createElement("p");
     opHealth.textContent ="Health: 100 / 100"
 
@@ -39,7 +55,7 @@ export const createMainLayout = () => {
     const opImage = document.createElement('img');
     opImage.classList.add('pk-sprite');
     opImage.id = 'op-pk';
-    opImage.src = opMon.srcFront;
+    opImage.src = player2Mon.srcFront;
     opImage.alt = 'Weezing';
     opImageBox.appendChild(opImage);
     topRow.appendChild(opImageBox);
@@ -52,7 +68,7 @@ export const createMainLayout = () => {
     const plImage = document.createElement('img');
     plImage.classList.add('pk-sprite');
     plImage.id = 'pl-pk';
-    plImage.src = playerMon.srcBack;
+    plImage.src = player1Mon.srcBack;
     plImage.alt = 'Weezing';
     plImageBox.appendChild(plImage);
     botRow.appendChild(plImageBox);
@@ -62,7 +78,7 @@ export const createMainLayout = () => {
     plStatusBox.classList.add("status-pl");
 
     const plPkName = document.createElement("p");
-    plPkName.textContent = "KäseBrot";
+    plPkName.textContent = player1MonName;
     const plHealth = document.createElement("p");
     plHealth.textContent ="Health: 100 / 100"
 
