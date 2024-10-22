@@ -1,0 +1,63 @@
+{
+  "state" : {
+    "type" : "MainState",
+    "player" : {
+      "pokemons" : [ ],
+      "currentPokemon" : {
+        "id" : 1,
+        "name" : "pikachu",
+        "hp" : 100,
+        "moves" : [ {
+          "name" : "tackle",
+          "power" : 50,
+          "moveType" : "normal",
+          "statusEffect" : "none"
+        }, {
+          "name" : "thunder",
+          "power" : 70,
+          "moveType" : "elektro",
+          "statusEffect" : "none"
+        } ],
+        "speed" : 30,
+        "pokeType" : "elektro",
+        "currentMove" : {
+          "name" : "empty",
+          "power" : 0,
+          "moveType" : "normal",
+          "statusEffect" : "none"
+        },
+        "status" : {
+          "stateType" : "NormalState"
+        }
+      },
+      "choice" : { }
+    },
+    "opponent" : {
+      "pokemons" : [ ],
+      "currentPokemon" : {
+        "id" : 5,
+        "name" : "waterPk",
+        "hp" : 100,
+        "moves" : [ {
+          "name" : "tackle",
+          "power" : 50,
+          "moveType" : "normal",
+          "statusEffect" : "none"
+        } ],
+        "speed" : 50,
+        "pokeType" : "water",
+        "currentMove" : {
+          "name" : "empty",
+          "power" : 0,
+          "moveType" : "normal",
+          "statusEffect" : "none"
+        },
+        "status" : {
+          "stateType" : "NormalState"
+        }
+      },
+      "choice" : { }
+    },
+    "roundReport" : ""
+  }
+}
