@@ -5,24 +5,25 @@
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(5px);
     color: white;
-    opacity: 0.85; /* Slightly more opaque to mimic terminal background */
+    opacity: 0.85; 
     font-family: 'Courier New', Courier, monospace; /* Monospace font for terminal look */
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: flex-start;
-    text-align: left; /* Left-align text to mimic terminal output */
+    text-align: left; 
     width: 75vw;
     height: 75vh;
     border-radius: 10px;
-    overflow-y: auto; /* Allows for scrolling if output gets too long */
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Adds depth for a more realistic terminal look */
+    overflow-y: auto; 
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); 
+    
 }
 
 .tui-container p {
-    margin: 5px 0; /* Adds space between each line */
-    line-height: 1.5; /* Makes the text more readable */
-    white-space: pre-wrap; /* Preserves spaces and line breaks */
+    margin: 5px 0; 
+    line-height: 1.5; 
+    white-space: pre-wrap; 
     flex-grow: 1;
 }
 
@@ -35,23 +36,23 @@ form {
 input[type="text"] {
     background-color: black;
     border: none;
-    border-bottom: 2px solid #00ff00; /* Green cursor-like effect */
-    color: #00ff00; /* Green text to match the terminal theme */
-    font-family: inherit; /* Use the monospace font */
+    border-bottom: 2px solid #00ff00; 
+    color: #00ff00; 
+    font-family: inherit; 
     font-size: large;
     outline: none;
-    width: 100%; /* Full width for the input */
+    width: 100%; 
 }
 
 input[type="text"]::placeholder {
-    color: #00ff00; /* Green placeholder text for terminal look */
+    color: #00ff00; 
 }
 
 input[type="text"] {
-    caret-color: #00ff00; /* Green blinking cursor */
+    caret-color: #00ff00; 
 }
 
 
 button {
-    display: none; /* Hide the submit button, user can submit by pressing Enter */
+    display: none; 
 }

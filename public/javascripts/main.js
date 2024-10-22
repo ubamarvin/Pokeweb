@@ -1,10 +1,17 @@
 //main.js
 
 import { fakeServer } from "./fakeServer.js";
+import pokemonFetcher from "./pokemonFetcher.js"
+
+
+
+
 
 let currentInfoLayout
 
 export const createMainLayout = () => {
+    const playerMon = pokemonFetcher.results[0];
+    const opMon = pokemonFetcher.results[1];
     const guiContainer = document.createElement("div");
     guiContainer.classList.add('gui-container');
 
@@ -16,6 +23,15 @@ export const createMainLayout = () => {
 
     const opStatusBox = document.createElement("div");
     opStatusBox.classList.add("status");
+    opStatusBox.classList.add("status-op");
+
+    const opPkName = document.createElement("p");
+    opPkName.textContent = "Bisasam";
+    const opHealth = document.createElement("p");
+    opHealth.textContent ="Health: 100 / 100"
+
+    opStatusBox.appendChild(opPkName);
+    opStatusBox.appendChild(opHealth);
     topRow.appendChild(opStatusBox);
 
     const opImageBox = document.createElement('div');
@@ -23,7 +39,7 @@ export const createMainLayout = () => {
     const opImage = document.createElement('img');
     opImage.classList.add('pk-sprite');
     opImage.id = 'op-pk';
-    opImage.src = 'https://img.pokemondb.net/sprites/silver/normal/weezing.png';
+    opImage.src = opMon.srcFront;
     opImage.alt = 'Weezing';
     opImageBox.appendChild(opImage);
     topRow.appendChild(opImageBox);
@@ -36,7 +52,7 @@ export const createMainLayout = () => {
     const plImage = document.createElement('img');
     plImage.classList.add('pk-sprite');
     plImage.id = 'pl-pk';
-    plImage.src = 'https://img.pokemondb.net/sprites/silver/normal/weezing.png';
+    plImage.src = playerMon.srcBack;
     plImage.alt = 'Weezing';
     plImageBox.appendChild(plImage);
     botRow.appendChild(plImageBox);
@@ -44,6 +60,15 @@ export const createMainLayout = () => {
     const plStatusBox = document.createElement("div");
     plStatusBox.classList.add("status");
     plStatusBox.classList.add("status-pl");
+
+    const plPkName = document.createElement("p");
+    plPkName.textContent = "KäseBrot";
+    const plHealth = document.createElement("p");
+    plHealth.textContent ="Health: 100 / 100"
+
+    plStatusBox.appendChild(plPkName);
+    plStatusBox.appendChild(plHealth);
+
     botRow.appendChild(plStatusBox);
 
     // Append rows to poke-layer
@@ -63,7 +88,7 @@ export const createMainLayout = () => {
     // Round message
     const roundMsg = document.createElement('div');
     roundMsg.classList.add('round-msg');
-    roundMsg.textContent = 'What Will you do';
+    roundMsg.textContent = 'What Will you do?';
 
     // Choice buttons
     const choiceButtons = document.createElement('div');
@@ -78,18 +103,23 @@ export const createMainLayout = () => {
 
     const itemsBtn = document.createElement('div');
     itemsBtn.textContent = 'Items';
+    itemsBtn.classList.add('items-btn');
     itemsBtn.addEventListener("click", () => {
         fakeServer.receiveString("item");
     })
 
     const switchBtn = document.createElement('div');
     switchBtn.textContent = 'Switch';
+    switchBtn.classList.add('switch-btn');
+
     switchBtn.addEventListener("click", () => {
         fakeServer.receiveString("switch");
     })
 
     const runBtn = document.createElement('div');
     runBtn.textContent = 'Run';
+    runBtn.classList.add('run-btn');
+
 
     // Append buttons to choiceButtons container
     choiceButtons.appendChild(attackBtn);

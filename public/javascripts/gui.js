@@ -26,6 +26,7 @@ import {
     } from "./main.js"
 
 import { fakeServer } from "./fakeServer.js"
+import pokemonFetcher from "./pokemonFetcher.js"
 
 
 const gui_container = document.querySelector(".root")
@@ -88,8 +89,22 @@ const startPolling = () => {
     }, 500); // Adjust polling frequency as needed
 };
 
-startPolling();
+//startPolling();
 
-renderMainLayout()
+//// Wait for Pokemon Fetcher Pokemonfetcher
+(async function() {
+    while(pokemonFetcher.loading) {
+        await new Promise(resolve => setTimeout(resolve, 500));
+    }
+    if (!pokemonFetcher.error) {
+        startPolling();
+        renderMainLayout()
+    }else{
+        gui_container.textContent="Error Loading"
+    }
+
+})();
+
+//renderMainLayout()
 //renderDeadLayout()
 //renderPickState()
