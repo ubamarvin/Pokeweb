@@ -8,6 +8,10 @@ import play.api.mvc._
 import de.htwg.se.Pokeymon.Pokeymon
 import java.net.Authenticator.RequestorType
 import scala.concurrent.{ Future}
+import play.api.libs.json.Json
+import play.api.libs.json.JsValue
+
+
 
 
 /**
@@ -24,6 +28,7 @@ class HomeController @Inject()(val controllerComponents: ControllerComponents) e
   */
   //GET
   def tui() = Action {
+  gameController.save
   Ok(views.html.tui(gameController.printDisplay))
   }
 
@@ -40,10 +45,20 @@ class HomeController @Inject()(val controllerComponents: ControllerComponents) e
   /* 
   * Routes for Gui
    */
+  //Get
   def gui() = Action {
     Ok(views.html.gui())
   }
- 
+  //Post
+
+ //Experimental
+
+  def json() = Action {
+    val json: JsValue = gameController.getGameJson
+    Ok(json)
+ }
+
+  
   /**
    * Create an Action to render an HTML page.
    *
