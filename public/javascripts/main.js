@@ -5,8 +5,9 @@ import pokemonFetcher from "./pokemonFetcher.js"
 
 
 
-function findPokemonByName(pokemonFetcher, name) {
-    const foundPokemon = pokemonFetcher.results.find(pokemon => pokemon.name === name.toUpperCase());
+function findPokemonByName(pokemonFetcher, player) {
+    //console.log(player.currentPokemon.name)
+    const foundPokemon = pokemonFetcher.results.find(pokemon => pokemon.name === player.currentPokemon.name.toUpperCase());
 
     if (foundPokemon) {
         return foundPokemon; // 
@@ -20,12 +21,12 @@ let currentInfoLayout
 export const createMainLayout = (data) => {
     ///Get Data from Json Object
     //pokemonNames
-    const player1MonName = data.state.player.currentPokemon.name;
-    const player2MonName = data.state.opponent.currentPokemon.name;
+    const player1 = data.state.player
+    const player2 = data.state.opponent
 
     
-    const player1Mon = findPokemonByName(pokemonFetcher, player1MonName)
-    const player2Mon = findPokemonByName(pokemonFetcher, player2MonName)
+    const player1MonSprite = findPokemonByName(pokemonFetcher, player1)
+    const player2MonSprite = findPokemonByName(pokemonFetcher, player2)
     
 
     const guiContainer = document.createElement("div");
@@ -42,9 +43,13 @@ export const createMainLayout = (data) => {
     opStatusBox.classList.add("status-op");
 
     const opPkName = document.createElement("p");
-    opPkName.textContent = player2MonName;
+    opPkName.textContent = player2.currentPokemon.name
     const opHealth = document.createElement("p");
-    opHealth.textContent ="Health: 100 / 100"
+    const hp = player2.currentPokemon.hp
+    opHealth.textContent =`Health: ${hp} / 100`;
+
+    console.log("player 2 health " + hp); 
+
 
     opStatusBox.appendChild(opPkName);
     opStatusBox.appendChild(opHealth);
@@ -55,7 +60,7 @@ export const createMainLayout = (data) => {
     const opImage = document.createElement('img');
     opImage.classList.add('pk-sprite');
     opImage.id = 'op-pk';
-    opImage.src = player2Mon.srcFront;
+    opImage.src = player2MonSprite.srcFront;
     opImage.alt = 'Weezing';
     opImageBox.appendChild(opImage);
     topRow.appendChild(opImageBox);
@@ -68,7 +73,7 @@ export const createMainLayout = (data) => {
     const plImage = document.createElement('img');
     plImage.classList.add('pk-sprite');
     plImage.id = 'pl-pk';
-    plImage.src = player1Mon.srcBack;
+    plImage.src = player1MonSprite.srcBack;
     plImage.alt = 'Weezing';
     plImageBox.appendChild(plImage);
     botRow.appendChild(plImageBox);
@@ -78,9 +83,10 @@ export const createMainLayout = (data) => {
     plStatusBox.classList.add("status-pl");
 
     const plPkName = document.createElement("p");
-    plPkName.textContent = player1MonName;
+    plPkName.textContent = player1.currentPokemon.name;
     const plHealth = document.createElement("p");
-    plHealth.textContent ="Health: 100 / 100"
+    const hp_pl = player1.currentPokemon.hp;
+    plHealth.textContent =`Health: ${hp_pl} / 100`
 
     plStatusBox.appendChild(plPkName);
     plStatusBox.appendChild(plHealth);
@@ -163,11 +169,23 @@ const backBtn = document.createElement("div");
         fakeServer.receiveString("main-box")
     })
 
-export const updateInfoToAttack = () => {
+export const updateInfoToAttack = (player1) => {
     currentInfoLayout.textContent ="";
-    
+    const moveBox = document.createElement("div")
+    moveBox.classList.add("move-box");
+    console.log(player1.currentPokemon.moves)
+
+    player1.currentPokemon.moves.forEach(move => {
+        const moveDiv = document.createElement("div");
+        moveDiv.classList.add("move");
+        const moveName = document.createElement("p")
+        moveName.textContent = move.name;
+        moveDiv.appendChild(moveName);
+        moveBox.appendChild(moveDiv);
+    });
+    currentInfoLayout.appendChild(moveBox)
     currentInfoLayout.appendChild(backBtn);
-}
+};
 export const updateInfoToSwitch = () => {
     currentInfoLayout.textContent="";
     const switchBox = document.createElement("div");

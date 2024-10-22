@@ -1,6 +1,6 @@
 {
   "state" : {
-    "type" : "MainState",
+    "type" : "ChooseAttackState",
     "player" : {
       "pokemons" : [ ],
       "currentPokemon" : {
@@ -57,7 +57,6 @@
         }
       },
       "choice" : { }
-    },
-    "roundReport" : ""
+    }
   }
 }

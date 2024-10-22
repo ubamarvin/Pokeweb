@@ -72,7 +72,7 @@ const updateGui = (state) => {
     if (state === "MainState")
         renderMainLayout(data)
     if (state === "ChooseAttackState")
-        updateInfoToAttack()
+        updateInfoToAttack(data.state.player)
     if (state === "BattleEvalState")
     {}
     if (state === "SwitchPokemonState")
