@@ -76,7 +76,7 @@ const updateGui = (state) => {
     if (state === "BattleEvalState")
     {}
     if (state === "SwitchPokemonState")
-        updateInfoToSwitch()
+        updateInfoToSwitch(data.state.player)
     if (state === "ChooseItemState")
         updateInfoToItem()
     if (state === "main-box")

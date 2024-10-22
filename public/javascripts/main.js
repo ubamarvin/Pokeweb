@@ -5,9 +5,9 @@ import pokemonFetcher from "./pokemonFetcher.js"
 
 
 
-function findPokemonByName(pokemonFetcher, player) {
+function findPokemonByName(pokemonFetcher, pokemonName) {
     //console.log(player.currentPokemon.name)
-    const foundPokemon = pokemonFetcher.results.find(pokemon => pokemon.name === player.currentPokemon.name.toUpperCase());
+    const foundPokemon = pokemonFetcher.results.find(pokemon => pokemon.name === pokemonName.toUpperCase());
 
     if (foundPokemon) {
         return foundPokemon; // 
@@ -25,8 +25,8 @@ export const createMainLayout = (data) => {
     const player2 = data.state.opponent
 
     
-    const player1MonSprite = findPokemonByName(pokemonFetcher, player1)
-    const player2MonSprite = findPokemonByName(pokemonFetcher, player2)
+    const player1MonSprite = findPokemonByName(pokemonFetcher, player1.currentPokemon.name)
+    const player2MonSprite = findPokemonByName(pokemonFetcher, player2.currentPokemon.name)
     
 
     const guiContainer = document.createElement("div");
@@ -186,10 +186,38 @@ export const updateInfoToAttack = (player1) => {
     currentInfoLayout.appendChild(moveBox)
     currentInfoLayout.appendChild(backBtn);
 };
-export const updateInfoToSwitch = () => {
-    currentInfoLayout.textContent="";
+export const updateInfoToSwitch = (player1) => {
+    if(currentInfoLayout !== undefined)
+        currentInfoLayout.textContent="";
     const switchBox = document.createElement("div");
     switchBox.classList.add("switch-box");
+    console.log(player1);
+
+    player1.pokemons.forEach(pokemon => {
+        const pk = findPokemonByName(pokemonFetcher, pokemon.name)
+
+        const pokeSwitchDiv = document.createElement("div");
+        pokeSwitchDiv.classList.add("poke-switch");
+
+        const imgDiv = document.createElement("div");
+        imgDiv.classList.add("switch-poke-img-boc");
+        const img = document.createElement("img");
+        img.src = pk.srcFront;
+        imgDiv.appendChild(img);
+        pokeSwitchDiv.appendChild(imgDiv);
+
+        const pokeStats = document.createElement("div");
+        pokeStats.classList.add("poke-switch-stats");
+        const name = document.createElement("p");
+        name.textContent = pokemon.name;
+        const hp = document.createElement("p");
+        hp.textContent = pokemon.hp;
+        pokeStats.appendChild(name);
+        pokeStats.appendChild(hp)
+        pokeSwitchDiv.appendChild(pokeStats)
+        switchBox.appendChild(pokeSwitchDiv)
+
+    });
     currentInfoLayout.appendChild(switchBox);
 
     currentInfoLayout.appendChild(backBtn);
