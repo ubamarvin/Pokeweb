@@ -170,7 +170,10 @@ const backBtn = document.createElement("div");
     })
 
 export const updateInfoToAttack = (player1) => {
-    currentInfoLayout.textContent ="";
+    if (!currentInfoLayout){
+            return;
+        }
+        currentInfoLayout.textContent ="";
     const moveBox = document.createElement("div")
     moveBox.classList.add("move-box");
     console.log(player1.currentPokemon.moves)
@@ -183,8 +186,12 @@ export const updateInfoToAttack = (player1) => {
         moveDiv.appendChild(moveName);
         moveBox.appendChild(moveDiv);
     });
-    currentInfoLayout.appendChild(moveBox)
-    currentInfoLayout.appendChild(backBtn);
+
+    const moveInfo = document.createElement("div");
+    moveInfo.classList.add("move-info");
+    currentInfoLayout.appendChild(moveBox);
+    moveInfo.appendChild(backBtn);
+    currentInfoLayout.appendChild(moveInfo);
 };
 export const updateInfoToSwitch = (player1) => {
     if(currentInfoLayout !== undefined)
