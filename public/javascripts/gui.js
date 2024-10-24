@@ -62,11 +62,27 @@ const renderDeadLayout = () => {
     gui_container.appendChild(createDeadLayout());
 }
 
-const updateGui = (state) => {
+const updateGui = (previousState ,state) => {
     //actually i do not have to pass
     //the json file but i cant assure
     //consitency of data
     const data = jsonFetcher.gameData
+
+    // check if gui-container Element exists
+    // if not main has not been rendered
+    // case: Load or Reload
+    if(!document.querySelector(".gui-container")) {
+        console.log("PageReload. Render Main")
+        renderMainLayout(data);
+    }
+    
+    if (previousState === "SwitchPokemonState" |
+        previousState === "ChooseAttackState"  |
+        previousState === "ChooseItemState"
+    ) {
+        console.log("(sw|at|ch) to updateInfoToMain");
+        updateInfoToMain();
+    }
     if (state === "PickPokemonState")
         renderPickState()
     if (state === "MainState")
@@ -79,24 +95,22 @@ const updateGui = (state) => {
         updateInfoToSwitch(data.state.player)
     if (state === "ChooseItemState")
         updateInfoToItem()
-    if (state === "main-box")
-        updateInfoToMain()
     if (state === "YourDeadState")
         renderDeadLayout()
 }
 
 //
 const startPolling =  async () => {
-    //let previousState = fakeServer.getState(); // Store the initial state
+    
     let previousState = ""
-    // Set an interval to check for changes every 500 ms
+    
     setInterval(async () => {
-        await jsonFetcher.fetchGameJson(); // Get the current state
+        await jsonFetcher.fetchGameJson(); 
         const currentState = jsonFetcher.gameData.state.type
         if (currentState !== previousState) {
-            console.log("State has changed:", currentState); // Log if there's a change
-            previousState = currentState; // Update the previous state
-            updateGui(currentState);
+            console.log("State has changed from:",previousState +" to "+ currentState); // Log if there's a change
+            updateGui(previousState,currentState);
+            previousState = currentState; 
         }
     }, 500);
 };
