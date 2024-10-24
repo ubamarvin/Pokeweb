@@ -178,21 +178,58 @@ export const updateInfoToAttack = (player1) => {
     moveBox.classList.add("move-box");
     console.log(player1.currentPokemon.moves)
 
+    //player1.curen  moves
+
+    const moveInfo = document.createElement("div");
+    moveInfo.classList.add("move-info");
+    const moveInfoBackbtn = document.createElement("div");
+    moveInfoBackbtn.classList.add("move-info-btn-box");
+
+    const moveDescription = document.createElement("div");
+    moveDescription.classList.add("moveDescription");
+
     player1.currentPokemon.moves.forEach(move => {
         const moveDiv = document.createElement("div");
         moveDiv.classList.add("move");
+        addListenerMove(moveDiv,moveDescription, "test");
         const moveName = document.createElement("p")
         moveName.textContent = move.name;
         moveDiv.appendChild(moveName);
         moveBox.appendChild(moveDiv);
     });
 
-    const moveInfo = document.createElement("div");
-    moveInfo.classList.add("move-info");
+
+    moveInfoBackbtn.appendChild(backBtn);
+    moveInfo.appendChild(moveDescription);
+    moveInfo.appendChild(moveInfoBackbtn);
+    
     currentInfoLayout.appendChild(moveBox);
-    moveInfo.appendChild(backBtn);
+    moveInfo.appendChild(moveInfoBackbtn);
     currentInfoLayout.appendChild(moveInfo);
 };
+
+
+//hilfsfunktion für attack
+function addListenerMove(move,moveDescription ,moveData) {
+
+// Add hover event listeners to each move
+    move.addEventListener('mouseenter', () => {
+        moveDescription.textContent = moveData;
+        moveDescription.style.display = 'block'; // Show the description
+        moveDescription.style.opacity = '1'; // Ensure it's visible 
+    })
+
+    move.addEventListener('mouseleave', () => {
+        moveDescription.style.opacity = '0';
+        setTimeout(() => {
+            moveDescription.textContent= "";
+            moveDescription.style.display = 'block';
+        }, 300)
+})
+}
+
+
+
 export const updateInfoToSwitch = (player1) => {
     if(currentInfoLayout !== undefined)
         currentInfoLayout.textContent="";
