@@ -7,6 +7,10 @@ const indexContainer = document.querySelector(".index-container");
 // as long as the screen loads show a spinning div 
 function renderLoading() {
     console.log("loading");
+    if(!indexContainer){
+        return;
+    }
+    
     indexContainer.textContent = "";
     const loadingDiv = document.createElement('div');
     loadingDiv.classList.add('loading-container');
@@ -23,7 +27,12 @@ function renderLoading() {
 
 
 function renderPage(results) {
+    
     const aboutSection = document.querySelector(".about")
+    if (!aboutSection) {
+        console.error("Element with class '.about' not found");
+        return;
+    }
     aboutSection.classList.remove("hidden");
     indexContainer.textContent = "";
     indexContainer.appendChild(aboutSection);

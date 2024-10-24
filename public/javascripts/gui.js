@@ -15,6 +15,7 @@
  * Html Object containing a Json body
  */
 //gui.js
+
 import { createPickLayout } from "./pick.js"
 import { createDeadLayout} from "./dead.js"
 import { 
@@ -36,9 +37,6 @@ import jsonFetcher  from "./jsonFetcher.js"
 })();
 
 const gui_container = document.querySelector(".root")
-
-
-//render State based on fakeServers result..
 
 
 const renderPickState = () => {
@@ -116,7 +114,7 @@ const startPolling =  async () => {
 };
 
 
-
+//// Starts here !!
 //// Wait for Pokemon Fetcher Pokemonfetcher
 //// Since Pokefetcher only loads once it fetches the Data
 //// in its Module and is then exported

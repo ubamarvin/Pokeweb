@@ -4,3 +4,9 @@ Stateless means that each request is processsed without needing knowledge of pre
 Session management
 ### Send baselayout to clieant, manipulate with js
 
+
+
+####
+
+cant refresh page when in switch,attack or item mode because
+browser cannot get the rest of the main layout
