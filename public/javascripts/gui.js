@@ -23,7 +23,8 @@ import {
     updateInfoToAttack,
     updateInfoToItem,
     updateInfoToMain,
-    updateInfoToSwitch 
+    updateInfoToSwitch,
+    animation 
     } from "./main.js"
 
 //import { fakeServer } from "./fakeServer.js"
@@ -39,11 +40,11 @@ import jsonFetcher  from "./jsonFetcher.js"
 const gui_container = document.querySelector(".root")
 
 
-const renderPickState = () => {
+const renderPickState = (data) => {
     if(gui_container === null)
         return;
     gui_container.textContent="";
-    gui_container.appendChild(createPickLayout());
+    gui_container.appendChild(createPickLayout(data));
 }
 
 const renderMainLayout = (data) => {
@@ -60,11 +61,15 @@ const renderDeadLayout = () => {
     gui_container.appendChild(createDeadLayout());
 }
 
+let lock = 0;
 const updateGui = (previousState ,state) => {
     //actually i do not have to pass
     //the json file but i cant assure
     //consitency of data
     const data = jsonFetcher.gameData
+    if (lock == 1){
+        return
+    }
 
     // check if gui-container Element exists
     // if not main has not been rendered
@@ -81,14 +86,19 @@ const updateGui = (previousState ,state) => {
         console.log("(sw|at|ch) to updateInfoToMain");
         updateInfoToMain();
     }
+    if (previousState === "BattleEvalState") {
+        lock = 1;
+        animation();
+        lock = 0;
+    }
     if (state === "PickPokemonState")
-        renderPickState()
+        renderPickState(data);
     if (state === "MainState")
         renderMainLayout(data)
     if (state === "ChooseAttackState")
         updateInfoToAttack(data.state.player)
     if (state === "BattleEvalState")
-    {}
+    {} // af
     if (state === "SwitchPokemonState")
         updateInfoToSwitch(data.state.player)
     if (state === "ChooseItemState")
@@ -105,7 +115,7 @@ const startPolling =  async () => {
     setInterval(async () => {
         await jsonFetcher.fetchGameJson(); 
         const currentState = jsonFetcher.gameData.state.type
-        if (currentState !== previousState) {
+        if (currentState !== previousState || currentState === "PickPokemonState") {
             console.log("State has changed from:",previousState +" to "+ currentState); // Log if there's a change
             updateGui(previousState,currentState);
             previousState = currentState; 

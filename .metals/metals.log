@@ -1690,3 +1690,40 @@ SLF4J(I): Actual provider is of type [scribe.slf4j.ScribeServiceProvider@13924d6
 2024.10.24 17:01:37 INFO  Started: Metals version 1.4.0 in folders '/home/marvin/WebApp/pokeweb' for client Visual Studio Code 1.91.1.[0m
 2024.10.24 17:01:39 WARN  Flyway upgrade recommended: H2 2.3.232 is newer than this version of Flyway and support has not been tested. The latest supported version of H2 is 2.2.224.[0m
 2024.10.24 17:01:43 WARN  Build server is not auto-connectable.[0m
+2024.10.24 20:07:38 INFO  Shutting down server[0m
+2024.10.24 20:07:38 INFO  shutting down Metals[0m
+2024.10.24 20:07:38 INFO  Exiting server[0m
+2024.10.24 20:08:40 INFO  Started: Metals version 1.4.0 in folders '/home/marvin/WebApp/pokeweb' for client Visual Studio Code 1.91.1.[0m
+2024.10.24 20:08:42 WARN  Flyway upgrade recommended: H2 2.3.232 is newer than this version of Flyway and support has not been tested. The latest supported version of H2 is 2.2.224.[0m
+2024.10.24 20:08:48 WARN  Build server is not auto-connectable.[0m
+2024.10.24 22:24:17 INFO  Shutting down server[0m
+2024.10.24 22:24:17 INFO  shutting down Metals[0m
+2024.10.24 22:24:17 INFO  Exiting server[0m
+2024.10.28 09:26:27 INFO  Started: Metals version 1.4.0 in folders '/home/marvin/WebApp/pokeweb' for client Visual Studio Code 1.91.1.[0m
+2024.10.28 09:26:30 WARN  Flyway upgrade recommended: H2 2.3.232 is newer than this version of Flyway and support has not been tested. The latest supported version of H2 is 2.2.224.[0m
+2024.10.28 11:02:46 INFO  Started: Metals version 1.4.0 in folders '/home/marvin/WebApp/pokeweb' for client Visual Studio Code 1.91.1.[0m
+2024.10.28 11:02:51 WARN  Flyway upgrade recommended: H2 2.3.232 is newer than this version of Flyway and support has not been tested. The latest supported version of H2 is 2.2.224.[0m
+2024.10.28 11:02:56 WARN  Build server is not auto-connectable.[0m
+2024.10.28 11:32:41 INFO  Shutting down server[0m
+2024.10.28 11:32:41 INFO  shutting down Metals[0m
+2024.10.28 11:32:41 INFO  Exiting server[0m
+2024.10.28 20:03:55 INFO  Started: Metals version 1.4.0 in folders '/home/marvin/WebApp/pokeweb' for client Visual Studio Code 1.91.1.[0m
+2024.10.28 20:03:57 WARN  Flyway upgrade recommended: H2 2.3.232 is newer than this version of Flyway and support has not been tested. The latest supported version of H2 is 2.2.224.[0m
+2024.10.28 21:22:51 INFO  Shutting down server[0m
+2024.10.28 21:22:51 INFO  shutting down Metals[0m
+2024.10.28 21:22:51 INFO  Exiting server[0m
+2024.10.28 21:22:52 ERROR Unexpected error initializing server: 
+org.eclipse.lsp4j.jsonrpc.ResponseErrorException: Request window/showMessageRequest failed with message: Canceled
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleResponse(RemoteEndpoint.java:220)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.consume(RemoteEndpoint.java:204)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:185)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:97)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:114)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.lang.Thread.run(Thread.java:1583)
+[0m
+2024.10.29 08:23:51 INFO  Started: Metals version 1.4.0 in folders '/home/marvin/WebApp/pokeweb' for client Visual Studio Code 1.91.1.[0m
+2024.10.29 08:23:53 WARN  Flyway upgrade recommended: H2 2.3.232 is newer than this version of Flyway and support has not been tested. The latest supported version of H2 is 2.2.224.[0m

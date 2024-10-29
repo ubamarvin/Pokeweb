@@ -10,3 +10,14 @@ Session management
 
 cant refresh page when in switch,attack or item mode because
 browser cannot get the rest of the main layout
+-fixed
+
+
+
+#### render picked poke state
+
+state to state only works if state changes, fix this
+
+
+
+##### pick poke grid issues

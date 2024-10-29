@@ -1,0 +1,58 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Courier New', Courier, monospace; /* Monospace font for terminal look */
+
+}
+p {
+
+    color: white;
+}
+
+
+
+.gui-container{
+    display: grid;
+    grid-template-rows: 3fr 1fr;
+
+
+
+}
+
+.available-container {
+    grid-row: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.pick-available {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(15%, 1fr)); /* Automatically adjusts columns based on container width */
+    grid-auto-rows: minmax(25px, auto); /* Automatic row sizing */
+    grid-auto-flow: dense; /
+
+}
+
+.team-container {
+    grid-row: 2;
+}
+
+.pick-picked {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(15%, 1fr)); /* Automatically adjusts columns based on container width */
+    grid-auto-rows: minmax(25px, auto); /* Automatic row sizing */
+    grid-auto-flow: dense;
+
+}
+
+
+    
+
+.pick-poke-img {
+    transition: transform 0.3s ease; 
+}
+
+.pick-poke:hover .pick-poke-img {
+    transform: scale(1.7); 
+}

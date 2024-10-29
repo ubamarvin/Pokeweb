@@ -82,9 +82,17 @@ https://www.w3schools.com/css/css_positioning.asp
     background-color: #6e6e6e;
 }
 
+.status-op {
+    
+    
+    border-bottom-right-radius: 75px; /* Round bottom right corner */
+}
+
 .status-pl {
     right: 0;
-    bottom: 50%;
+    bottom: 10%;
+    border-top-left-radius: 75px; /* Round bottom right corner */
+
 }
 
 .top-row {
@@ -217,9 +225,8 @@ its parents containers padding is not respected */
 
 /*Attack/Item/Switch back button */
 .back-btn {
-    height:100%;
+    height:89%;
     width: 100%;
-    background-color: brown;
 
 }
 
@@ -234,6 +241,11 @@ its parents containers padding is not respected */
     right: 0px;
     bottom: 0px;
     
+}
+.switch-box {
+    display: grid;
+    grid-template-rows: repeat(6, 1fr); /* 6 rows of equal height */
+
 }
 
 
@@ -254,6 +266,11 @@ its parents containers padding is not respected */
     padding-left: 10px;
     transition: transform 0.3s ease;
     transform-origin: center;
+    color:black;
+}
+
+.move p {
+    color: black;
 }
 
 
@@ -269,6 +286,10 @@ its parents containers padding is not respected */
     
 }
 
+.move-info-box p {
+    color: black;
+}
+
 .move-info-box-btn-box {
     grid-column: 2;
     width: 100%;
@@ -280,3 +301,29 @@ its parents containers padding is not respected */
     transform: scale(1.1);
 }
 
+
+
+/* Animation */
+.beam {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    border-radius: 50%;
+    animation: moveBeam 4s ease-in-out;
+    display: none;
+}
+
+
+@keyframes moveBeam {
+    0% {
+        left: 15%; /* Start near the left Pokémon */
+        top: 50%;
+        opacity: 1;
+    }
+    100% {
+        left: 85%; /* End near the right Pokémon */
+        top: 50%;
+        opacity: 0;
+    }
+}

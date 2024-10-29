@@ -191,7 +191,25 @@ export const updateInfoToAttack = (player1) => {
     player1.currentPokemon.moves.forEach(move => {
         const moveDiv = document.createElement("div");
         moveDiv.classList.add("move");
-        addListenerMove(moveDiv,moveDescription, "test");
+        //
+        const moveInfoBox = document.createElement("div");
+        moveInfoBox.classList.add("move-info-box");
+        const p_power = document.createElement("p");
+        const p_type = document.createElement("p");
+        const p_status = document.createElement("p");
+        p_power.textContent = `Power: ${move.power}`;
+        p_type.textContent = `Type: ${move.moveType}`;
+        p_status.textContent = `Status: ${move.statusEffect}`;
+
+        moveInfoBox.appendChild(p_power);
+        moveInfoBox.appendChild(p_type);
+        moveInfoBox.appendChild(p_status);
+        
+
+
+
+
+        addListenerMove(moveDiv,moveDescription, moveInfoBox);
         const moveName = document.createElement("p")
         moveName.textContent = move.name;
         moveDiv.appendChild(moveName);
@@ -214,7 +232,7 @@ function addListenerMove(move,moveDescription ,moveData) {
 
 // Add hover event listeners to each move
     move.addEventListener('mouseenter', () => {
-        moveDescription.textContent = moveData;
+        moveDescription.appendChild(moveData);
         moveDescription.style.display = 'block'; // Show the description
         moveDescription.style.opacity = '1'; // Ensure it's visible 
     })
@@ -318,5 +336,22 @@ export const updateInfoToMain = () => {
     // Append roundMsg and choiceButtons to infoLayer
     currentInfoLayout.appendChild(roundMsg);
     currentInfoLayout.appendChild(choiceButtons);
+
+}
+
+
+export const animation = ()=> {
+    console.log("animat!!");
+    const beam = document.createElement("div");
+    beam.classList.add("beam");
+    beam.style.display ="block";
+    const pokeLayer = document.querySelector(".poke-layer");
+    pokeLayer.appendChild(beam)
+    document.querySelector("op-image-box");
+
+    beam.style.animation = "moveBeam 4s ease-in-out";
+    
+    
+
 
 }

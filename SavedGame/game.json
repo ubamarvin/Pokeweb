@@ -1,12 +1,12 @@
 {
   "state" : {
-    "type" : "ChooseAttackState",
+    "type" : "MainState",
     "player" : {
       "pokemons" : [ ],
       "currentPokemon" : {
         "id" : 1,
         "name" : "pikachu",
-        "hp" : 100,
+        "hp" : 50,
         "moves" : [ {
           "name" : "tackle",
           "power" : 50,
@@ -21,8 +21,8 @@
         "speed" : 30,
         "pokeType" : "elektro",
         "currentMove" : {
-          "name" : "empty",
-          "power" : 0,
+          "name" : "tackle",
+          "power" : 50,
           "moveType" : "normal",
           "statusEffect" : "none"
         },
@@ -30,14 +30,21 @@
           "stateType" : "NormalState"
         }
       },
-      "choice" : { }
+      "choice" : {
+        "attackChoice" : {
+          "name" : "tackle",
+          "power" : 50,
+          "moveType" : "normal",
+          "statusEffect" : "none"
+        }
+      }
     },
     "opponent" : {
       "pokemons" : [ ],
       "currentPokemon" : {
         "id" : 5,
-        "name" : "waterPk",
-        "hp" : 100,
+        "name" : "lugia",
+        "hp" : 50,
         "moves" : [ {
           "name" : "tackle",
           "power" : 50,
@@ -47,8 +54,8 @@
         "speed" : 50,
         "pokeType" : "water",
         "currentMove" : {
-          "name" : "empty",
-          "power" : 0,
+          "name" : "tackle",
+          "power" : 50,
           "moveType" : "normal",
           "statusEffect" : "none"
         },
@@ -56,7 +63,15 @@
           "stateType" : "NormalState"
         }
       },
-      "choice" : { }
-    }
+      "choice" : {
+        "attackChoice" : {
+          "name" : "tackle",
+          "power" : 50,
+          "moveType" : "normal",
+          "statusEffect" : "none"
+        }
+      }
+    },
+    "roundReport" : "-lugias attack tackle was executed normally\n-pikachus attack tackle was executed normally\n"
   }
 }
