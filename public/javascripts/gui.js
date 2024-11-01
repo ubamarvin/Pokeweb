@@ -18,12 +18,11 @@
 
 import { createPickLayout } from "./pick.js"
 import { createDeadLayout} from "./dead.js"
+import { createSwitchLayout} from "./switch.js"
 import { 
     createMainLayout,
     updateInfoToAttack,
-    updateInfoToItem,
     updateInfoToMain,
-    updateInfoToSwitch,
     animation 
     } from "./main.js"
 
@@ -37,6 +36,7 @@ import jsonFetcher  from "./jsonFetcher.js"
     console.log(type); // Now you can log or use the type
 })();
 
+///bad naming
 const gui_container = document.querySelector(".root")
 
 
@@ -52,6 +52,13 @@ const renderMainLayout = (data) => {
         return;
     gui_container.textContent="";
     gui_container.appendChild(createMainLayout(data));
+}
+
+const renderSwitchLayout = (data) => {
+    if(gui_container === null)
+        return;
+    gui_container.textContent="";
+    gui_container.appendChild(createSwitchLayout(data));
 }
 
 const renderDeadLayout = () => {
@@ -79,8 +86,7 @@ const updateGui = (previousState ,state) => {
         renderMainLayout(data);
     }
     
-    if (previousState === "SwitchPokemonState" |
-        previousState === "ChooseAttackState"  |
+    if (previousState === "ChooseAttackState"  |
         previousState === "ChooseItemState"
     ) {
         console.log("(sw|at|ch) to updateInfoToMain");
@@ -100,9 +106,9 @@ const updateGui = (previousState ,state) => {
     if (state === "BattleEvalState")
     {} // af
     if (state === "SwitchPokemonState")
-        updateInfoToSwitch(data.state.player)
+        renderSwitchLayout(data.state.player)
     if (state === "ChooseItemState")
-        updateInfoToItem()
+        console.log("update to item");
     if (state === "YourDeadState")
         renderDeadLayout()
 }

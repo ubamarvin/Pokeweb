@@ -29,7 +29,7 @@ only works on direct background image*/
 }
 
 .hidden {
-  display: inline;
+  display: none;
 }
 
 .poke-image-container {

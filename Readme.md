@@ -17,7 +17,13 @@ browser cannot get the rest of the main layout
 #### render picked poke state
 
 state to state only works if state changes, fix this
-
+--fixed
 
 
 ##### pick poke grid issues
+
+##### Bootstrap
+
+---make pickpokemon drag and drop
+
+---make layout responsive

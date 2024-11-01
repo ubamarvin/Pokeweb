@@ -37,20 +37,13 @@
     -webkit-backdrop-filter: blur(5px);
     color: black;
     opacity: 0.8;
-
-    
-
     width: 75vw;
     height: 75vh;  
-
-    border-radius: 10px;
-    
+    border-radius: 10px;    
+    position: relative;
 }
 
-.gui-container > div ,
-.gui-container > div > div {
 
-}
 
 /* (Main/Attack/Switch/Item) State
 /*_____Layer 1_________*/
@@ -60,7 +53,7 @@
    grid-template-rows: 1fr 1fr;
    height: 100%;
    position: relative;
-   z-index: 1;
+   z-index: -1;
 }
 /*
 https://www.w3schools.com/css/css_positioning.asp
@@ -70,6 +63,14 @@ https://www.w3schools.com/css/css_positioning.asp
     position: relative;
     height: 100%; 
 }
+.top-row {
+    grid-row: 1;
+}
+
+.bot-row {
+    grid-row: 2;    
+}
+
 
 .status {
     display: flex;
@@ -95,44 +96,35 @@ https://www.w3schools.com/css/css_positioning.asp
 
 }
 
-.top-row {
-    grid-row: 1;
-}
-
-.bot-row {
-    grid-row: 2;
-    
-}
 
 .op-image-box,
 .pl-image-box {
     position: absolute;
-    width: auto;
-    height: auto;
+    width: 300px; /*else it just fucks it all up */
     animation: moveUpDown 1s ease-in-out infinite; /* Animation properties */
 
 }
 
 .op-image-box {
     top: 30%;
-    right: 10%;
+    right: 0%;
     animation-delay: 0s;
+    text-align: right;
 }
 
 #op-pk {
-    width: 200%;
+    width: 70%;
     height: auto;
 }
 
 
 .pl-image-box {
-    bottom: 15%;
-    left: 0%;
-    
+    bottom: -45%;
+    left: 0%; 
     animation-delay: 0.13s;
 }
 #pl-pk {
-    width: 300%;
+    width: 100%;
     height: auto;
 }
 
@@ -150,14 +142,15 @@ The idea is that the gui consist of multiple layers
 /* manually set container padding because due to position: absolute
 its parents containers padding is not respected */
 .info-layer {
-    background-color: aliceblue;
+    background-color: rgba(68, 110, 146, 0.548);
     flex: 1;
     position: absolute;
-    z-index: 2;
+    /*z-index: 0;*/
     height: 25%;
     bottom: var(--container-padding);
     left: var(--container-padding);
     right: var(--container-padding);
+
 
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -170,8 +163,10 @@ its parents containers padding is not respected */
     align-items: center;
     padding: 5px;
     font-size: 1.5em;
+    background-color: none;
 
 }
+
 
 .choice-buttons {
     grid-column: 2;
@@ -232,24 +227,59 @@ its parents containers padding is not respected */
 
 /*Switch State spec */
 
-.switch-box, 
-.item-box {
-    position: absolute;
-    background-color: aliceblue;
-    height: 300%;
-    width: 50%;
-    right: 0px;
-    bottom: 0px;
-    
+.gui-container-switch {
+    padding: var(--container-padding);
+    background-color: rgb(0,0,0);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(5px);
+    color: black;
+    opacity: 0.8;
+    width: 75vw;
+    height: 75vh;  
+    border-radius: 10px;
+    display: flex;    
 }
+
 .switch-box {
-    display: grid;
-    grid-template-rows: repeat(6, 1fr); /* 6 rows of equal height */
-
+    flex: 1;
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    max-height: 100%;
 }
 
+.poke-card {
+    flex: 0 1 calc(100% / 6);
+    display: flex;
+}
 
-/*Attack State spec */
+.poke-card p {
+    padding: 0px;
+    margin: 0px;
+}
+
+.switch-poke-img-box {
+    max-height: 100%;
+    max-width: 50%;
+    flex: 1;
+}
+
+.drop-zone {
+    color: white;
+    margin: 0px;
+    text-align: center;
+    padding: 20px;
+    font-size: large;
+}
+
+/*
+.switch-poke-img-box img {
+    height: 100%;
+    width: auto;
+}*/
+
+
+/*Attack State */
 
 .move-box {
     grid-column: 1;

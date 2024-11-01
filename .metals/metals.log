@@ -1727,3 +1727,69 @@ org.eclipse.lsp4j.jsonrpc.ResponseErrorException: Request window/showMessageRequ
 [0m
 2024.10.29 08:23:51 INFO  Started: Metals version 1.4.0 in folders '/home/marvin/WebApp/pokeweb' for client Visual Studio Code 1.91.1.[0m
 2024.10.29 08:23:53 WARN  Flyway upgrade recommended: H2 2.3.232 is newer than this version of Flyway and support has not been tested. The latest supported version of H2 is 2.2.224.[0m
+2024.10.29 11:14:10 INFO  no build target found for /home/marvin/WebApp/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.10.29 11:14:13 INFO  no build target found for /home/marvin/WebApp/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.10.29 11:14:13 INFO  no build target found for /home/marvin/WebApp/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.10.29 11:15:49 INFO  no build target found for /home/marvin/WebApp/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.10.30 08:16:45 INFO  Shutting down server[0m
+2024.10.30 08:16:45 INFO  shutting down Metals[0m
+2024.10.30 08:16:45 INFO  Exiting server[0m
+2024.10.30 08:51:57 INFO  Started: Metals version 1.4.0 in folders '/home/marvin/WebApp/pokeweb' for client Visual Studio Code 1.91.1.[0m
+2024.10.30 08:51:59 WARN  Flyway upgrade recommended: H2 2.3.232 is newer than this version of Flyway and support has not been tested. The latest supported version of H2 is 2.2.224.[0m
+2024.10.30 08:51:59 INFO  no build target found for /home/marvin/WebApp/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.10.30 08:52:01 INFO  no build target found for /home/marvin/WebApp/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.10.30 08:52:01 INFO  no build target found for /home/marvin/WebApp/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.10.30 08:52:01 INFO  no build target found for /home/marvin/WebApp/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+Oct 30, 2024 8:52:01 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 2
+Oct 30, 2024 8:52:01 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 4
+2024.10.30 08:52:01 INFO  no build target found for /home/marvin/WebApp/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+Oct 30, 2024 8:52:02 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 9
+2024.10.30 08:52:04 INFO  no build target found for /home/marvin/WebApp/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.10.30 08:52:06 INFO  no build target found for /home/marvin/WebApp/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.10.30 08:52:06 INFO  no build target found for /home/marvin/WebApp/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.10.30 08:52:07 INFO  no build target found for /home/marvin/WebApp/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.10.30 08:52:35 INFO  no build target found for /home/marvin/WebApp/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.10.30 09:08:06 INFO  Shutting down server[0m
+2024.10.30 09:08:06 INFO  shutting down Metals[0m
+2024.10.30 09:08:06 INFO  Exiting server[0m
+2024.10.31 12:14:06 INFO  Started: Metals version 1.4.0 in folders '/home/marvin/WebApp/pokeweb' for client Visual Studio Code 1.91.1.[0m
+2024.10.31 12:14:10 WARN  Flyway upgrade recommended: H2 2.3.232 is newer than this version of Flyway and support has not been tested. The latest supported version of H2 is 2.2.224.[0m
+2024.10.31 12:17:58 INFO  no build target found for /home/marvin/WebApp/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.10.31 12:18:02 INFO  no build target found for /home/marvin/WebApp/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.10.31 12:18:02 INFO  no build target found for /home/marvin/WebApp/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.10.31 12:18:02 INFO  no build target found for /home/marvin/WebApp/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+Oct 31, 2024 12:18:02 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 6
+2024.10.31 12:18:02 INFO  no build target found for /home/marvin/WebApp/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.10.31 12:18:08 INFO  no build target found for /home/marvin/WebApp/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.10.31 19:34:30 INFO  Shutting down server[0m
+2024.10.31 19:34:30 INFO  shutting down Metals[0m
+2024.10.31 19:34:30 INFO  Exiting server[0m
+2024.10.31 19:34:30 ERROR Unexpected error initializing server: 
+org.eclipse.lsp4j.jsonrpc.ResponseErrorException: Request window/showMessageRequest failed with message: Canceled
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleResponse(RemoteEndpoint.java:220)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.consume(RemoteEndpoint.java:204)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:185)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:97)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:114)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.lang.Thread.run(Thread.java:1583)
+[0m
+2024.11.01 11:48:42 INFO  Started: Metals version 1.4.0 in folders '/home/marvin/WebApp/pokeweb' for client Visual Studio Code 1.91.1.[0m
+2024.11.01 11:48:45 WARN  Flyway upgrade recommended: H2 2.3.232 is newer than this version of Flyway and support has not been tested. The latest supported version of H2 is 2.2.224.[0m
+2024.11.01 11:48:50 INFO  no build target found for /home/marvin/WebApp/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.01 11:48:54 INFO  no build target found for /home/marvin/WebApp/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.01 11:48:54 INFO  no build target found for /home/marvin/WebApp/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+Nov 01, 2024 11:48:54 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 7
+Nov 01, 2024 11:48:54 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 2
+2024.11.01 12:47:53 INFO  no build target found for /home/marvin/WebApp/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+Nov 01, 2024 5:10:48 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace

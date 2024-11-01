@@ -5,7 +5,7 @@ import pokemonFetcher from "./pokemonFetcher.js"
 
 
 
-function findPokemonByName(pokemonFetcher, pokemonName) {
+export function findPokemonByName(pokemonFetcher, pokemonName) {
     //console.log(player.currentPokemon.name)
     const foundPokemon = pokemonFetcher.results.find(pokemon => pokemon.name === pokemonName.toUpperCase());
 
@@ -23,6 +23,13 @@ export const createMainLayout = (data) => {
     //pokemonNames
     const player1 = data.state.player
     const player2 = data.state.opponent
+
+    let roundMessage= data.state.roundReport;
+    if (roundMessage === ""){
+        roundMessage = "What will you do?"
+    }
+    
+
 
     
     const player1MonSprite = findPokemonByName(pokemonFetcher, player1.currentPokemon.name)
@@ -109,15 +116,15 @@ export const createMainLayout = (data) => {
 
     // Round message
     const roundMsg = document.createElement('div');
-    roundMsg.classList.add('round-msg');
-    roundMsg.textContent = 'What Will you do?';
+    roundMsg.classList.add('round-msg', "btn", "btn-outline-secondary");
+    roundMsg.textContent = roundMessage;
 
     // Choice buttons
     const choiceButtons = document.createElement('div');
     choiceButtons.classList.add('choice-buttons');
 
     const attackBtn = document.createElement('div');
-    attackBtn.classList.add('attack-btn');
+    attackBtn.classList.add('attack-btn', "btn", "btn-outline-secondary");
     attackBtn.textContent = 'Attack';
     attackBtn.addEventListener("click", () => {
         fakeServer.receiveString("attack");
@@ -125,14 +132,14 @@ export const createMainLayout = (data) => {
 
     const itemsBtn = document.createElement('div');
     itemsBtn.textContent = 'Items';
-    itemsBtn.classList.add('items-btn');
+    itemsBtn.classList.add('items-btn', "btn", "btn-outline-secondary");
     itemsBtn.addEventListener("click", () => {
         fakeServer.receiveString("item");
     })
 
     const switchBtn = document.createElement('div');
     switchBtn.textContent = 'Switch';
-    switchBtn.classList.add('switch-btn');
+    switchBtn.classList.add('switch-btn', "btn", "btn-outline-secondary");
 
     switchBtn.addEventListener("click", () => {
         fakeServer.receiveString("switch");
@@ -140,7 +147,10 @@ export const createMainLayout = (data) => {
 
     const runBtn = document.createElement('div');
     runBtn.textContent = 'Run';
-    runBtn.classList.add('run-btn');
+    runBtn.classList.add('run-btn', "btn", "btn-outline-secondary");
+    runBtn.addEventListener("click", ()=> {
+        addListenerMove("Cant run");
+    })
 
 
     // Append buttons to choiceButtons container
@@ -190,7 +200,7 @@ export const updateInfoToAttack = (player1) => {
 
     player1.currentPokemon.moves.forEach(move => {
         const moveDiv = document.createElement("div");
-        moveDiv.classList.add("move");
+        moveDiv.classList.add("move", "btn", "btn-secondary");
         //
         const moveInfoBox = document.createElement("div");
         moveInfoBox.classList.add("move-info-box");
@@ -247,7 +257,7 @@ function addListenerMove(move,moveDescription ,moveData) {
 }
 
 
-
+/*
 export const updateInfoToSwitch = (player1) => {
     if(currentInfoLayout !== undefined)
         currentInfoLayout.textContent="";
@@ -284,8 +294,9 @@ export const updateInfoToSwitch = (player1) => {
 
     currentInfoLayout.appendChild(backBtn);
 }
+*/
 
-
+/*
 export const updateInfoToItem = () => {
     currentInfoLayout.textContent="";
     const itemBox = document.createElement("div");
@@ -293,6 +304,7 @@ export const updateInfoToItem = () => {
     currentInfoLayout.appendChild(itemBox);
     currentInfoLayout.appendChild(backBtn);
 }
+    */
 
 export const updateInfoToMain = () => {
     currentInfoLayout.textContent="";
@@ -306,20 +318,20 @@ export const updateInfoToMain = () => {
     choiceButtons.classList.add('choice-buttons');
 
     const attackBtn = document.createElement('div');
-    attackBtn.classList.add('attack-btn');
+    attackBtn.classList.add('attack-btn', "btn", "btn-outline-secondary");
     attackBtn.textContent = 'Attack';
     attackBtn.addEventListener("click", () => {
         fakeServer.receiveString("attack");
     })
 
     const itemsBtn = document.createElement('div');
-    itemsBtn.textContent = 'Items';
+    itemsBtn.textContent = 'Items', "btn", "btn-outline-secondary";
     itemsBtn.addEventListener("click", () => {
         fakeServer.receiveString("item");
     })
 
     const switchBtn = document.createElement('div');
-    switchBtn.textContent = 'Switch';
+    switchBtn.textContent = 'Switch', "btn", "btn-outline-secondary";
     switchBtn.addEventListener("click", () => {
         fakeServer.receiveString("switch");
     })
