@@ -1,5 +1,66 @@
 /*blur doesnt work
 only works on direct background image*/
+@media (min-width: 322px) and (max-width: 576px){
+  .index-container {
+    width: 100vw !important;
+    height: 90vh !important;
+    border-radius: 0px !important;
+    padding: 5px !important;
+}
+  
+}
+
+
+
+/* Mobile (landscape) - Small devices  */
+@media (min-width: 577px) and (max-width: 767px) {
+  .index-container {
+    width: 100vw !important;
+    height: 90vh !important;
+    border-radius: 0px !important;
+    padding: 5px !important;
+}
+}
+
+/* Tablets*/
+@media (min-width: 768px) and (max-width: 991px) {
+  .index-container {
+    width: 100vw !important;
+    height: 90vh !important;
+    border-radius: 0px !important;
+    padding: 5px !important;
+}
+.poke-image-container div {
+  width: 250px !important;
+  height: auto !important;
+  margin-left: 0px !important;
+}
+
+.about {
+  width: 75vw !important;
+  height: 50vh !important;
+}
+}
+/* Tablets Landscape */
+@media (min-width: 991px) and (max-width: 1024px) {
+  .index-container {
+    width: 100vw !important;
+    height: 90vh !important;
+    border-radius: 0px !important;
+    padding: 5px !important;
+}
+.poke-image-container div {
+  width: 250px !important;
+  height: auto !important;
+  margin-left: 0px !important;
+}
+
+.about {
+  width: 75vw !important;
+  height: 50vh !important;
+}
+}
+
 
 
 .index-container {
@@ -8,11 +69,7 @@ only works on direct background image*/
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(5px);
     color: white;
-
     opacity: 0.8;
-
-    
-
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -21,10 +78,6 @@ only works on direct background image*/
 
     width: 75vw;
     height: 75vh;
-
- 
-  
-
     border-radius: 10px;
 }
 

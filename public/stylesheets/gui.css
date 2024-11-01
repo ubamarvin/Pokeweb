@@ -6,6 +6,222 @@
 
 }
 
+.hamburger-button {
+    background-color: rgb(0,0,0) !important;
+    backdrop-filter: blur(10px) !important;
+    -webkit-backdrop-filter: blur(5px);
+    color: black;
+    border-top-left-radius: 0% !important;
+    border-top-right-radius: 0% !important;
+    border-bottom-color: black !important;
+    border-left-color:  black !important;
+    border-right-color: black !important;
+    border-top-color: black !important;
+}
+.offcanvas-start {
+    background-color: grey;
+}
+
+.offcanvas,
+.offcanvas-body {
+    background-color: rgba(0,0,0,0.8);
+    backdrop-filter: blur(10px) !important;
+    -webkit-backdrop-filter: blur(5px);
+    opacity: 0.9;
+    font-size: 26px;
+
+
+}                          
+
+@media (min-width: 322px) and (max-width: 576px){
+    /*________GUI__________*/
+    .gui-container,
+    .gui-container-switch{
+        width: 100vw !important;
+        height: 90vh !important;
+        border-radius: 0px !important;    
+
+    }
+    .info-layer {
+        bottom: 2% !important;
+    }
+
+    .status {
+        font-size: 12px;
+        font-weight: bold;
+    }
+
+    .pl-image-box {
+        left: -10% !important;
+    }
+
+    .round-msg,
+    .btn {
+        font-size: 14px !important;
+        color: white !important;
+        font-weight: bold !important;
+
+    }
+    .round-msg {
+        text-align: left !important;
+    }
+  }
+  
+
+  
+/* Mobile (landscape) - Small devices  */
+@media (min-width: 577px) and (max-width: 767px) {
+    .gui-container,
+    .gui-container-switch{
+        width: 100vw !important;
+        height: 90vh !important;
+        border-radius: 0px !important;    
+        padding-top: 0px !important;
+
+    }
+    .info-layer {
+        bottom: 2% !important;
+    }
+    
+    .pick-poke-img {
+        width: 60px !important;
+        height: auto !important;
+    }
+
+    .gui-container-switch {
+        display: flex !important;
+        flex-wrap: wrap !important;
+        padding-right: 10px;
+    }
+
+    .d-flex,
+    .flex-collumn {
+        display: flex !important;
+        flex-wrap: wrap !important;
+    }
+
+    .poke-card {
+        flex: 1 !important;
+        max-width: 200px !important;
+    }
+    .status {
+        font-size: 12px;
+        font-weight: bold;
+        height: 50% !important;
+    }
+    .status-pl {
+        bottom: 4px !important;
+    }
+
+    .pl-image-box {
+        left: -10% !important;
+        bottom: -80% !important;
+
+    }
+
+    .round-msg,
+    .btn {
+        font-size: 14px !important;
+        color: white !important;
+        font-weight: bold !important;
+
+    }
+    .round-msg {
+        text-align: left !important;
+    }
+  }
+
+
+/* Tablets*/
+@media (min-width: 768px) and (max-width: 991px) {
+  /*________GUI__________*/
+  .gui-container,
+  .gui-container-switch{
+      width: 100vw !important;
+      height: 90vh !important;
+      border-radius: 0px !important;    
+
+  }
+  .info-layer {
+      bottom: 2% !important;
+  }
+
+  .status {
+      font-size: 24px;
+      font-weight: bold;
+  }
+
+  .pl-image-box {
+      left: -10% !important;
+  }
+
+  .round-msg,
+  .btn {
+      font-size: 24px !important;
+      color: white !important;
+      font-weight: bold !important;
+
+  }
+  .round-msg {
+      text-align: left !important;
+  }
+}
+
+/* Tablets landscape*/
+@media (min-width: 991px) and (max-width: 1400px) {
+    /*________GUI__________*/
+    .gui-container,
+    .gui-container-switch{
+        width: 100vw !important;
+        height: 90vh !important;
+        border-radius: 0px !important;    
+  
+    }
+    .info-layer {
+        bottom: 2% !important;
+    }
+  
+    .status {
+        font-size: 24px;
+        font-weight: bold;
+    }
+  
+    .pl-image-box {
+        left: -0% !important;
+    }
+  
+    .round-msg,
+    .btn {
+        font-size: 24px !important;
+        color: white !important;
+        font-weight: bold !important;
+  
+    }
+    .round-msg {
+        text-align: left !important;
+    }
+
+
+    .gui-container-switch {
+        display: flex !important;
+        flex-wrap: wrap !important;
+        padding-right: 10px;
+    }
+
+    .d-flex,
+    .flex-collumn {
+        display: flex !important;
+        flex-wrap: wrap !important;
+    }
+
+    .poke-card {
+        flex: 1 !important;
+        max-width: 200px !important;
+    }
+  }
+
+
+
 :root {
     --container-padding: 10px;
 }
@@ -81,18 +297,19 @@ https://www.w3schools.com/css/css_positioning.asp
     width: 40%;
     height: 40%;
     background-color: #6e6e6e;
+    
 }
 
 .status-op {
-    
-    
     border-bottom-right-radius: 75px; /* Round bottom right corner */
+    text-align: left;
 }
 
 .status-pl {
+    border-top-left-radius: 75px; /* Round bottom right corner */
     right: 0;
     bottom: 10%;
-    border-top-left-radius: 75px; /* Round bottom right corner */
+    text-align: right;
 
 }
 
