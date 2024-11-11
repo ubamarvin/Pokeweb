@@ -27,3 +27,4 @@ state to state only works if state changes, fix this
 ---make pickpokemon drag and drop
 
 ---make layout responsive
+-> iphone SE ipad mini
