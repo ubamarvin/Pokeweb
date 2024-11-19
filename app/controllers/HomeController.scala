@@ -56,7 +56,19 @@ class HomeController @Inject()(val controllerComponents: ControllerComponents) e
   def json() = Action {
     val json: JsValue = gameController.getGameJson
     Ok(json)
- }
+  }
+
+  def postJson() : Action[AnyContent] = Action {implicit request =>
+    request.body.asJson match {
+      case Some(jsValue) =>
+        println(s"\n\n Received JSON: $jsValue \n\n")
+        gameController.setGameJson(jsValue)
+        Ok(Json.obj("status" -> "succes", "message" ->"JSON data receive"))
+      case None =>
+        Ok(Json.obj("status" -> "error", "message" -> "Expected JSON"))
+      }
+
+  }
 
   
   /**

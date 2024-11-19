@@ -1,24 +1,128 @@
 {
   "state" : {
-    "type" : "MainState",
+    "type" : "ChooseAttackState",
     "player" : {
       "pokemons" : [ {
-        "id" : 12,
-        "name" : "charizard",
-        "hp" : 100,
+        "id" : 8,
+        "name" : "Raichu",
+        "hp" : 105,
         "moves" : [ {
-          "name" : "firebreath",
-          "power" : 50,
-          "moveType" : "fire",
+          "name" : "thunder",
+          "power" : 70,
+          "moveType" : "elektro",
           "statusEffect" : "none"
         }, {
-          "name" : "burn",
-          "power" : 0,
-          "moveType" : "fire",
-          "statusEffect" : "burn"
+          "name" : "bodyslam",
+          "power" : 30,
+          "moveType" : "normal",
+          "statusEffect" : "none"
         } ],
-        "speed" : 100,
-        "pokeType" : "fire",
+        "speed" : 50,
+        "pokeType" : "elektro",
+        "currentMove" : {
+          "name" : "empty",
+          "power" : 0,
+          "moveType" : "normal",
+          "statusEffect" : "none"
+        },
+        "status" : {
+          "stateType" : "NormalState"
+        }
+      }, {
+        "id" : 9,
+        "name" : "oddish",
+        "hp" : 85,
+        "moves" : [ {
+          "name" : "vegankick",
+          "power" : 50,
+          "moveType" : "plant",
+          "statusEffect" : "none"
+        }, {
+          "name" : "tackle",
+          "power" : 50,
+          "moveType" : "normal",
+          "statusEffect" : "none"
+        } ],
+        "speed" : 30,
+        "pokeType" : "plant",
+        "currentMove" : {
+          "name" : "empty",
+          "power" : 0,
+          "moveType" : "normal",
+          "statusEffect" : "none"
+        },
+        "status" : {
+          "stateType" : "NormalState"
+        }
+      }, {
+        "id" : 10,
+        "name" : "zubat",
+        "hp" : 80,
+        "moves" : [ {
+          "name" : "tackle",
+          "power" : 50,
+          "moveType" : "normal",
+          "statusEffect" : "none"
+        }, {
+          "name" : "bodyslam",
+          "power" : 30,
+          "moveType" : "normal",
+          "statusEffect" : "none"
+        } ],
+        "speed" : 25,
+        "pokeType" : "normal",
+        "currentMove" : {
+          "name" : "empty",
+          "power" : 0,
+          "moveType" : "normal",
+          "statusEffect" : "none"
+        },
+        "status" : {
+          "stateType" : "NormalState"
+        }
+      }, {
+        "id" : 14,
+        "name" : "primeape",
+        "hp" : 110,
+        "moves" : [ {
+          "name" : "kick",
+          "power" : 75,
+          "moveType" : "normal",
+          "statusEffect" : "none"
+        }, {
+          "name" : "tackle",
+          "power" : 50,
+          "moveType" : "normal",
+          "statusEffect" : "none"
+        } ],
+        "speed" : 60,
+        "pokeType" : "fight",
+        "currentMove" : {
+          "name" : "empty",
+          "power" : 0,
+          "moveType" : "normal",
+          "statusEffect" : "none"
+        },
+        "status" : {
+          "stateType" : "NormalState"
+        }
+      }, {
+        "id" : 16,
+        "name" : "golduck",
+        "hp" : 100,
+        "moves" : [ {
+          "name" : "waterjet",
+          "power" : 50,
+          "moveType" : "water",
+          "statusEffect" : "none"
+        }, {
+          "name" : "bodyslam",
+          "power" : 30,
+          "moveType" : "normal",
+          "statusEffect" : "none"
+        } ],
+        "speed" : 55,
+        "pokeType" : "water",
         "currentMove" : {
           "name" : "empty",
           "power" : 0,
@@ -30,22 +134,22 @@
         }
       } ],
       "currentPokemon" : {
-        "id" : 1,
-        "name" : "pikachu",
-        "hp" : 100,
+        "id" : 6,
+        "name" : "bulbasaur",
+        "hp" : 95,
         "moves" : [ {
           "name" : "tackle",
           "power" : 50,
           "moveType" : "normal",
           "statusEffect" : "none"
         }, {
-          "name" : "thunder",
-          "power" : 70,
-          "moveType" : "elektro",
+          "name" : "vegankick",
+          "power" : 50,
+          "moveType" : "plant",
           "statusEffect" : "none"
         } ],
-        "speed" : 30,
-        "pokeType" : "elektro",
+        "speed" : 45,
+        "pokeType" : "plant",
         "currentMove" : {
           "name" : "empty",
           "power" : 0,
@@ -59,8 +163,7 @@
       "choice" : { }
     },
     "opponent" : {
-      "pokemons" : [ ],
-      "currentPokemon" : {
+      "pokemons" : [ {
         "id" : 5,
         "name" : "lugia",
         "hp" : 100,
@@ -81,9 +184,35 @@
         "status" : {
           "stateType" : "NormalState"
         }
+      } ],
+      "currentPokemon" : {
+        "id" : 4,
+        "name" : "eevee",
+        "hp" : 100,
+        "moves" : [ {
+          "name" : "bodyslam",
+          "power" : 30,
+          "moveType" : "normal",
+          "statusEffect" : "none"
+        }, {
+          "name" : "kick",
+          "power" : 75,
+          "moveType" : "normal",
+          "statusEffect" : "none"
+        } ],
+        "speed" : 35,
+        "pokeType" : "fight",
+        "currentMove" : {
+          "name" : "empty",
+          "power" : 0,
+          "moveType" : "normal",
+          "statusEffect" : "none"
+        },
+        "status" : {
+          "stateType" : "NormalState"
+        }
       },
       "choice" : { }
-    },
-    "roundReport" : ""
+    }
   }
 }

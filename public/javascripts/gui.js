@@ -121,7 +121,7 @@ const startPolling =  async () => {
     setInterval(async () => {
         await jsonFetcher.fetchGameJson(); 
         const currentState = jsonFetcher.gameData.state.type
-        if (currentState !== previousState || currentState === "PickPokemonState") {
+        if (currentState !== previousState /*|| currentState === "PickPokemonState"*/) {
             console.log("State has changed from:",previousState +" to "+ currentState); // Log if there's a change
             updateGui(previousState,currentState);
             previousState = currentState; 

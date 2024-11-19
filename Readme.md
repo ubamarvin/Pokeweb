@@ -28,3 +28,10 @@ state to state only works if state changes, fix this
 
 ---make layout responsive
 -> iphone SE ipad mini
+
+
+#####
+json communication!
+-- Round report is missing in received json object.
+
+-- some pokemon are not found in pokedex

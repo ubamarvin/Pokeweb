@@ -14,7 +14,7 @@ class JsonFetcher {
         }
   
         this.gameData = await response.json(); // Store the fetched data
-        //console.log(this.gameData); // Use the fetched data here
+        //console.log("jsonFetcher: " + this.gameData); // Use the fetched data here
       } catch (error) {
         console.error('There has been a problem with your fetch operation:', error);
       } finally {

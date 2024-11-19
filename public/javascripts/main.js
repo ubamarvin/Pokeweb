@@ -2,6 +2,9 @@
 
 import { fakeServer } from "./fakeServer.js";
 import pokemonFetcher from "./pokemonFetcher.js"
+import jsonManipulator from "./jsonManipulator.js";
+import jsonFetcher from "./jsonFetcher.js";
+let data = jsonFetcher.gameData;
 
 
 
@@ -128,6 +131,7 @@ export const createMainLayout = (data) => {
     attackBtn.textContent = 'Attack';
     attackBtn.addEventListener("click", () => {
         fakeServer.receiveString("attack");
+        jsonManipulator.manipulateJson(data, "ChooseAttackState");
     })
 
     const itemsBtn = document.createElement('div');
@@ -135,6 +139,8 @@ export const createMainLayout = (data) => {
     itemsBtn.classList.add('items-btn', "btn", "btn-outline-secondary");
     itemsBtn.addEventListener("click", () => {
         fakeServer.receiveString("item");
+        jsonManipulator.manipulateJson(data, "ChooseItemState");
+
     })
 
     const switchBtn = document.createElement('div');
@@ -143,6 +149,7 @@ export const createMainLayout = (data) => {
 
     switchBtn.addEventListener("click", () => {
         fakeServer.receiveString("switch");
+        jsonManipulator.manipulateJson(data, "SwitchPokemonState");
     })
 
     const runBtn = document.createElement('div');
@@ -220,6 +227,10 @@ export const updateInfoToAttack = (player1) => {
 
 
         addListenerMove(moveDiv,moveDescription, moveInfoBox);
+        moveDiv.addEventListener("click",() => {
+            console.log("moveClicked");
+            jsonManipulator.manipulateJson(data, move.name);
+        })
         const moveName = document.createElement("p")
         moveName.textContent = move.name;
         moveDiv.appendChild(moveName);

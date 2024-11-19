@@ -1,5 +1,6 @@
 // pick
 import pokemonFetcher from "./pokemonFetcher.js"
+import jsonManipulator from "./jsonManipulator.js"
 
 function findPokemonByName(pokemonFetcher, pokemonName) {
     //console.log(player.currentPokemon.name)
@@ -34,6 +35,9 @@ export const createPickLayout = (data) => {
         img.src = pokeImg;
         //Create Div to hold image and pit img in pokediv
         const pokeDiv = document.createElement("div");
+        pokeDiv.addEventListener("click", () => {
+            jsonManipulator.manipulateJson(data,pokemon.name);
+        });
         pokeDiv.classList.add("pick-poke");
         pokeDiv.appendChild(img);
         available.appendChild(pokeDiv);
