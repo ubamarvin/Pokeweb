@@ -1,3 +1,16 @@
+file://<WORKSPACE>/app/controllers/HomeController.scala
+### java.lang.IndexOutOfBoundsException: -1
+
+occurred in the presentation compiler.
+
+presentation compiler configuration:
+
+
+action parameters:
+offset: 2059
+uri: file://<WORKSPACE>/app/controllers/HomeController.scala
+text:
+```scala
 //HomeController.scala
 
 package controllers
@@ -19,14 +32,12 @@ import play.api.libs.streams.ActorFlow
 
 
 
-
-
 /**
  * This controller creates an `Action` to handle HTTP requests to the
  * application's home page.
  */
 @Singleton
-class HomeController @Inject()(val controllerComponents: ControllerComponents)(implicit system: ActorSystem, mat: Materializer) extends BaseController {
+class HomeController @Inject()(val controllerComponents: ControllerComponents) extends BaseController {
 
   val gameController = Pokeymon.controller;
 
@@ -84,7 +95,7 @@ class HomeController @Inject()(val controllerComponents: ControllerComponents)(i
   
   class PokemonWebSocketActor(out: ActorRef) extends Actor {
     override def preStart(): Unit = {
-      sendJsonToClient;
+      sendJsonToClient(@@)
     }
 
     def receive = {
@@ -110,7 +121,7 @@ class HomeController @Inject()(val controllerComponents: ControllerComponents)(i
   }
 
   //                                                request =>
-  def socket() = WebSocket.accept[JsValue, JsValue] { request  =>
+  def socket = WeBsocket.accept[JsValue, JsValue] { request  =>
   ActorFlow.actorRef {out => 
     println("\n\n\n\n Connect received \n\n\n\n");
     PokemonWebSocketActorFactory.create(out);
@@ -137,3 +148,23 @@ class HomeController @Inject()(val controllerComponents: ControllerComponents)(i
     Ok(views.html.index())
   }
 }
+
+```
+
+
+
+#### Error stacktrace:
+
+```
+scala.collection.LinearSeqOps.apply(LinearSeq.scala:129)
+	scala.collection.LinearSeqOps.apply$(LinearSeq.scala:128)
+	scala.collection.immutable.List.apply(List.scala:79)
+	dotty.tools.dotc.util.Signatures$.applyCallInfo(Signatures.scala:244)
+	dotty.tools.dotc.util.Signatures$.computeSignatureHelp(Signatures.scala:101)
+	dotty.tools.dotc.util.Signatures$.signatureHelp(Signatures.scala:88)
+	dotty.tools.pc.SignatureHelpProvider$.signatureHelp(SignatureHelpProvider.scala:47)
+	dotty.tools.pc.ScalaPresentationCompiler.signatureHelp$$anonfun$1(ScalaPresentationCompiler.scala:422)
+```
+#### Short summary: 
+
+java.lang.IndexOutOfBoundsException: -1
