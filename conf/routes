@@ -21,7 +21,7 @@ POST /json                          controllers.HomeController.postJson()
 
 #### Websocket
 
-GET /websocket                      controllers.HomeController.socket()
+GET /socket                         controllers.HomeController.socket()
 
 # Map static resources from the /public folder to the /assets URL path
 GET     /assets/*file               controllers.Assets.versioned(path="/public", file: Asset)

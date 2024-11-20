@@ -19,22 +19,13 @@
 import { createPickLayout } from "./pick.js"
 import { createDeadLayout} from "./dead.js"
 import { createSwitchLayout} from "./switch.js"
-import { 
-    createMainLayout,
-    updateInfoToAttack,
-    updateInfoToMain,
-    animation 
-    } from "./main.js"
-
-//import { fakeServer } from "./fakeServer.js"
+import {createMainLayout,
+        updateInfoToAttack,
+        updateInfoToMain,
+        animation } from "./main.js"
 import pokemonFetcher from "./pokemonFetcher.js"
-import jsonFetcher  from "./jsonFetcher.js"
+import webSocketManager from "./webSocketManager.js"
 
-(async () => {
-    await jsonFetcher.fetchGameJson(); // Fetch the game JSON first
-    const type = jsonFetcher.gameData.state.type; // Access the type after fetching
-    console.log(type); // Now you can log or use the type
-})();
 
 ///bad naming
 const gui_container = document.querySelector(".root")
@@ -68,19 +59,23 @@ const renderDeadLayout = () => {
     gui_container.appendChild(createDeadLayout());
 }
 
-let lock = 0;
-const updateGui = (previousState ,state) => {
-    //actually i do not have to pass
-    //the json file but i cant assure
-    //consitency of data
-    const data = jsonFetcher.gameData
-    if (lock == 1){
-        return
-    }
+let previousState = localStorage.getItem("previousState");
+const PICK = "PickPokemonState";
+const MAIN = "MainState";
+const ATT  = "ChooseAttackState";
+const SW = "SwitchPokemonState";
+const IT = "ChooseItemState";
+const BE = "BattleEvalState";
+const DEAD = "YourDeadState";
+const updateGui = (data) => {
+   
+    const state = data.state.type;
+    console.log("UpdateGui State: ", state);
+    console.log("UpdateGui PrevState: ", previousState);
 
-    // check if gui-container Element exists
-    // if not main has not been rendered
-    // case: Load or Reload
+    
+
+
     if(!document.querySelector(".gui-container")) {
         console.log("PageReload. Render Main")
         renderMainLayout(data);
@@ -93,41 +88,43 @@ const updateGui = (previousState ,state) => {
         updateInfoToMain();
     }
     if (previousState === "BattleEvalState") {
-        lock = 1;
-        animation();
-        lock = 0;
+    
     }
-    if (state === "PickPokemonState")
+    if (state === PICK || 
+        (previousState === PICK && state === PICK)
+    ){
+        console.log("renderPick")
         renderPickState(data);
-    if (state === "MainState")
-        renderMainLayout(data)
-    if (state === "ChooseAttackState")
+        }
+
+    if (state === "MainState"){
+        renderMainLayout(data);
+        }
+
+    if (state === "ChooseAttackState"){
         updateInfoToAttack(data.state.player)
+        }
+
     if (state === "BattleEvalState")
     {} // af
-    if (state === "SwitchPokemonState")
+
+    if (state === "SwitchPokemonState"){
         renderSwitchLayout(data.state.player)
-    if (state === "ChooseItemState")
+        }
+
+    if (state === "ChooseItemState"){
         console.log("update to item");
-    if (state === "YourDeadState")
+    }
+
+    if (state === "YourDeadState"){
         renderDeadLayout()
+    }
+    previousState = state;
+    localStorage.setItem("previousState", state);
+
 }
 
-//
-const startPolling =  async () => {
-    
-    let previousState = ""
-    
-    setInterval(async () => {
-        await jsonFetcher.fetchGameJson(); 
-        const currentState = jsonFetcher.gameData.state.type
-        if (currentState !== previousState /*|| currentState === "PickPokemonState"*/) {
-            console.log("State has changed from:",previousState +" to "+ currentState); // Log if there's a change
-            updateGui(previousState,currentState);
-            previousState = currentState; 
-        }
-    }, 500);
-};
+
 
 
 //// Starts here !!
@@ -140,15 +137,19 @@ const startPolling =  async () => {
         await new Promise(resolve => setTimeout(resolve, 500));
     }
     if (!pokemonFetcher.error) {
-        startPolling();
-        //renderMainLayout()
-        //console.log("neverreach")
+
+        //override the Class Method handleMessage
+        //@para data: this is the parameter passed
+        //inside the single instance of webSocketManager
+        //via the eventHandler "message"
+        webSocketManager.setHandleMessage((data) => {
+            console.log("Overriden websocket.handleMsg()");
+            console.log(data);
+            updateGui(data);
+        })
+
     }else{
         gui_container.textContent="Error Loading"
     }
 
 })();
-
-//renderMainLayout()
-//renderDeadLayout()
-//renderPickState()

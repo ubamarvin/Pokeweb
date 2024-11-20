@@ -25,8 +25,10 @@ class JsonFetcher {
 // for some magical reason parantheses are needed here...
 const jsonFetcher = new JsonFetcher();
 
+/*
 (async () => {
     await jsonFetcher.fetchGameJson();
 })();
+*/
 
 export default jsonFetcher;

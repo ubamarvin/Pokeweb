@@ -81,7 +81,7 @@ class HomeController @Inject()(val controllerComponents: ControllerComponents)(i
   
   
   
-  
+  // no reactions as of yet. Will be needed for 1 vs 1 mode
   class PokemonWebSocketActor(out: ActorRef) extends Actor {
     override def preStart(): Unit = {
       sendJsonToClient;
@@ -109,7 +109,7 @@ class HomeController @Inject()(val controllerComponents: ControllerComponents)(i
     }
   }
 
-  //                                                request =>
+  //                                                
   def socket() = WebSocket.accept[JsValue, JsValue] { request  =>
   ActorFlow.actorRef {out => 
     println("\n\n\n\n Connect received \n\n\n\n");

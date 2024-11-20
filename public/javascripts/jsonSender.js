@@ -13,7 +13,7 @@ import jsonFetcher  from "./jsonFetcher.js"
     console.log(jsonFetcher.isLoading);
 
     // works, server success
-    let editData = JSON.stringify(data); //works
+    //let editData = JSON.stringify(data); //works
 
     // server error 500
     
@@ -47,7 +47,7 @@ import jsonFetcher  from "./jsonFetcher.js"
       })
       .then(clonedData => console.log('Success:', clonedData))
       .catch(error => console.error('Error:', error));
-})();
+});
 
 /// to server
 
