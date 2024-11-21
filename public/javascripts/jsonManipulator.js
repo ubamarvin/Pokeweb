@@ -7,6 +7,9 @@
 
 //it should contain a function responsible for manipulating the json object
 
+import webSocketManager from "./webSocketManager.js";
+
+
 
 class JsonManipulator {
     constructor() { 
@@ -24,7 +27,7 @@ class JsonManipulator {
             console.log("calling mainMani")
         }
         if(state === "ChooseAttackState"){
-
+            this.chooseAttackManipulator(data, choice);
         }
         if(state === "SwitchPokemonState"){
             
@@ -62,8 +65,8 @@ class JsonManipulator {
 
 
         
-        if (picks >= 6) {
-            console.log("Picks >= 6")
+        if (picks >= 1) {
+            console.log("Picks >= 1")
             data.state.type = "MainState";
             data.state["roundReport"] = "";
             let currentPokemon = data.state.player.pokemons.shift();
@@ -84,6 +87,41 @@ class JsonManipulator {
         this.postUpdatedJson(updData, choice);
     }
 
+    chooseAttackManipulator(data, choice) {
+      let move = data.state.player.currentPokemon.moves.find(move => move.name === choice)
+      if(move === undefined){
+        console.err("Move not found");
+        return;
+      }
+      console.log("choosen move:", move)
+      console.log("Choice\n",JSON.stringify(data.state.player.choice, null,2));
+      data.state.player.choice = {
+        attackChoice: move
+      };
+      console.log("Updated Choice: \n "+JSON.stringify(data.state.player.choice, null,2));
+
+      data.state.type = "BattleEvalState";
+      console.log("Updated Choice after changing data.state.type: \n "+JSON.stringify(data.state.player.choice, null,2));
+
+      data.state.player.currentPokemon.currentMove = move;
+      console.log("Updated player after changing ...currentMove: \n "+JSON.stringify(data.state.player, null,2));
+
+
+      let updData = JSON.stringify(data);
+      console.log(updData);
+      this.postUpdatedJson(updData);
+      //also post a random letter
+
+    }
+
+    postUpdatedJson = (data) => {
+      console.log("sending to server");
+      const obj = JSON.parse(data)
+      console.log(JSON.stringify(obj, null,2));
+      webSocketManager.sendMessage(data);
+    }
+
+    /*
     async postUpdatedJson(updData) {
         try {
           const response = await fetch('http://localhost:9000/json', {
@@ -110,6 +148,7 @@ class JsonManipulator {
           console.error("Error:", error);
         }
       }
+        */
       
 
    

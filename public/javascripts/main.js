@@ -3,8 +3,7 @@
 import { fakeServer } from "./fakeServer.js";
 import pokemonFetcher from "./pokemonFetcher.js"
 import jsonManipulator from "./jsonManipulator.js";
-import jsonFetcher from "./jsonFetcher.js";
-let data = jsonFetcher.gameData;
+
 
 
 
@@ -186,14 +185,14 @@ const backBtn = document.createElement("div");
         fakeServer.receiveString("main-box")
     })
 
-export const updateInfoToAttack = (player1) => {
+export const updateInfoToAttack = (data) => {
     if (!currentInfoLayout){
             return;
         }
         currentInfoLayout.textContent ="";
     const moveBox = document.createElement("div")
     moveBox.classList.add("move-box");
-    console.log(player1.currentPokemon.moves)
+    
 
     //player1.curen  moves
 
@@ -205,7 +204,7 @@ export const updateInfoToAttack = (player1) => {
     const moveDescription = document.createElement("div");
     moveDescription.classList.add("moveDescription");
 
-    player1.currentPokemon.moves.forEach(move => {
+    data.state.player.currentPokemon.moves.forEach(move => {
         const moveDiv = document.createElement("div");
         moveDiv.classList.add("move", "btn", "btn-secondary");
         //
@@ -317,7 +316,7 @@ export const updateInfoToItem = () => {
 }
     */
 
-export const updateInfoToMain = () => {
+export const updateInfoToMain = (data) => {
     currentInfoLayout.textContent="";
 
     const roundMsg = document.createElement('div');
@@ -332,19 +331,20 @@ export const updateInfoToMain = () => {
     attackBtn.classList.add('attack-btn', "btn", "btn-outline-secondary");
     attackBtn.textContent = 'Attack';
     attackBtn.addEventListener("click", () => {
-        fakeServer.receiveString("attack");
+        jsonManipulator.manipulateJson(data, "attack");
     })
 
     const itemsBtn = document.createElement('div');
     itemsBtn.textContent = 'Items', "btn", "btn-outline-secondary";
     itemsBtn.addEventListener("click", () => {
-        fakeServer.receiveString("item");
+        jsonManipulator.manipulateJson(data, "item")
+        
     })
 
     const switchBtn = document.createElement('div');
     switchBtn.textContent = 'Switch', "btn", "btn-outline-secondary";
     switchBtn.addEventListener("click", () => {
-        fakeServer.receiveString("switch");
+        jsonManipulator.manipulateJson(data, "switch")
     })
 
     const runBtn = document.createElement('div');

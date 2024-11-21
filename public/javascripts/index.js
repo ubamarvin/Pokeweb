@@ -22,7 +22,8 @@ function renderLoading() {
 
 // Render Pokémon
 function renderPage(results) {
-    
+    if (indexContainer === null)
+        return
     indexContainer.innerHTML = ""; // Clear indexContainer
     aboutSection.classList.remove("hidden");
     const pokeImageContainer = document.createElement("div");

@@ -67,7 +67,8 @@ const SW = "SwitchPokemonState";
 const IT = "ChooseItemState";
 const BE = "BattleEvalState";
 const DEAD = "YourDeadState";
-const updateGui = (data) => {
+
+export const updateGui = (data) => {
    
     const state = data.state.type;
     console.log("UpdateGui State: ", state);
@@ -81,14 +82,20 @@ const updateGui = (data) => {
         renderMainLayout(data);
     }
     
-    if (previousState === "ChooseAttackState"  |
-        previousState === "ChooseItemState"
+    if ((previousState === "ChooseAttackState"  |
+        previousState === "ChooseItemState")
+        && state == MAIN
     ) {
         console.log("(sw|at|ch) to updateInfoToMain");
         updateInfoToMain();
     }
-    if (previousState === "BattleEvalState") {
-    
+
+    if ((previousState === "ChooseAttackState"  |
+        previousState === "ChooseItemState")
+        && state == BE
+    ) {
+        console.log("(sw|at|ch) to BattleEval");
+        updateInfoToMain(data);
     }
     if (state === PICK || 
         (previousState === PICK && state === PICK)
@@ -102,7 +109,7 @@ const updateGui = (data) => {
         }
 
     if (state === "ChooseAttackState"){
-        updateInfoToAttack(data.state.player)
+        updateInfoToAttack(data)
         }
 
     if (state === "BattleEvalState")
@@ -138,18 +145,10 @@ const updateGui = (data) => {
     }
     if (!pokemonFetcher.error) {
 
-        //override the Class Method handleMessage
-        //@para data: this is the parameter passed
-        //inside the single instance of webSocketManager
-        //via the eventHandler "message"
-        webSocketManager.setHandleMessage((data) => {
-            console.log("Overriden websocket.handleMsg()");
-            console.log(data);
-            updateGui(data);
-        })
 
     }else{
         gui_container.textContent="Error Loading"
     }
 
 })();
+
