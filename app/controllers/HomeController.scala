@@ -107,18 +107,29 @@ class HomeController @Inject()(val controllerComponents: ControllerComponents)(i
    
     def receive = {
       case json: JsValue =>
-        println("/n/n Received Json in receive");
-        gameController.setGameJson(json)
-        println("/n/n setgameJson() in receive");
-        out ! (gameController.getGameJson)
-        println("/n/n Sent updJson Client");
+        try {
+          if((json \ "state" \ "type").asOpt[String].contains("BattleEvalState")){
+            println("\n\n\n Battle State in Server detected \n\n\n”");
+            gameController.setGameJson(json);
+            gameController.handleInput(" ");
+          }
+          
+          println("\n\n Received Json in receive");
+          gameController.setGameJson(json)
+          println("\n\n setgameJson() in receive");
+          out ! (gameController.getGameJson)
+          println("\n\n Sent updJson Client");
+        } catch {
+          case e: Exception =>
+            println(e);
+        }
 
     }
 
     def sendJsonToClient = {
-      println("/n/n Pushing initial Json to client");
+      println("\n\n Pushing initial Json to client");
       out ! (gameController.getGameJson);
-      println("/n/n pushed initial Json to client");
+      println("\n\n pushed initial Json to client");
     }
   }
 

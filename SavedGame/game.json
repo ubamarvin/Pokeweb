@@ -2,15 +2,14 @@
   "state" : {
     "type" : "BattleEvalState",
     "player" : {
-      "pokemons" : [ ],
-      "currentPokemon" : {
-        "id" : 7,
-        "name" : "squirtle",
-        "hp" : 90,
+      "pokemons" : [ {
+        "id" : 14,
+        "name" : "primeape",
+        "hp" : 40,
         "moves" : [ {
-          "name" : "waterjet",
-          "power" : 50,
-          "moveType" : "water",
+          "name" : "kick",
+          "power" : 75,
+          "moveType" : "normal",
           "statusEffect" : "none"
         }, {
           "name" : "tackle",
@@ -18,12 +17,39 @@
           "moveType" : "normal",
           "statusEffect" : "none"
         } ],
-        "speed" : 40,
-        "pokeType" : "water",
+        "speed" : 60,
+        "pokeType" : "fight",
         "currentMove" : {
-          "name" : "tackle",
-          "power" : 50,
+          "name" : "kick",
+          "power" : 75,
           "moveType" : "normal",
+          "statusEffect" : "none"
+        },
+        "status" : {
+          "stateType" : "NormalState"
+        }
+      } ],
+      "currentPokemon" : {
+        "id" : 12,
+        "name" : "charizard",
+        "hp" : 50,
+        "moves" : [ {
+          "name" : "firebreath",
+          "power" : 50,
+          "moveType" : "fire",
+          "statusEffect" : "none"
+        }, {
+          "name" : "burn",
+          "power" : 0,
+          "moveType" : "fire",
+          "statusEffect" : "burn"
+        } ],
+        "speed" : 100,
+        "pokeType" : "fire",
+        "currentMove" : {
+          "name" : "firebreath",
+          "power" : 50,
+          "moveType" : "fire",
           "statusEffect" : "none"
         },
         "status" : {
@@ -32,18 +58,19 @@
       },
       "choice" : {
         "attackChoice" : {
-          "name" : "tackle",
+          "name" : "firebreath",
           "power" : 50,
-          "moveType" : "normal",
+          "moveType" : "fire",
           "statusEffect" : "none"
         }
       }
     },
     "opponent" : {
-      "pokemons" : [ {
+      "pokemons" : [ ],
+      "currentPokemon" : {
         "id" : 5,
         "name" : "lugia",
-        "hp" : 100,
+        "hp" : 25,
         "moves" : [ {
           "name" : "tackle",
           "power" : 50,
@@ -53,35 +80,8 @@
         "speed" : 50,
         "pokeType" : "water",
         "currentMove" : {
-          "name" : "empty",
-          "power" : 0,
-          "moveType" : "normal",
-          "statusEffect" : "none"
-        },
-        "status" : {
-          "stateType" : "NormalState"
-        }
-      } ],
-      "currentPokemon" : {
-        "id" : 4,
-        "name" : "eevee",
-        "hp" : 50,
-        "moves" : [ {
-          "name" : "bodyslam",
-          "power" : 30,
-          "moveType" : "normal",
-          "statusEffect" : "none"
-        }, {
-          "name" : "kick",
-          "power" : 75,
-          "moveType" : "normal",
-          "statusEffect" : "none"
-        } ],
-        "speed" : 35,
-        "pokeType" : "fight",
-        "currentMove" : {
-          "name" : "empty",
-          "power" : 0,
+          "name" : "tackle",
+          "power" : 50,
           "moveType" : "normal",
           "statusEffect" : "none"
         },

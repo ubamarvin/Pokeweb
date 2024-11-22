@@ -24,6 +24,7 @@ import {createMainLayout,
         updateInfoToMain,
         animation } from "./main.js"
 import pokemonFetcher from "./pokemonFetcher.js"
+import jsonManipulator from "./jsonManipulator.js"
 import webSocketManager from "./webSocketManager.js"
 
 
@@ -71,11 +72,7 @@ const DEAD = "YourDeadState";
 export const updateGui = (data) => {
    
     const state = data.state.type;
-    console.log("UpdateGui State: ", state);
-    console.log("UpdateGui PrevState: ", previousState);
-
-    
-
+    console.log("UpdateGui from "+previousState+" to "+ state);
 
     if(!document.querySelector(".gui-container")) {
         console.log("PageReload. Render Main")
@@ -88,14 +85,6 @@ export const updateGui = (data) => {
     ) {
         console.log("(sw|at|ch) to updateInfoToMain");
         updateInfoToMain();
-    }
-
-    if ((previousState === "ChooseAttackState"  |
-        previousState === "ChooseItemState")
-        && state == BE
-    ) {
-        console.log("(sw|at|ch) to BattleEval");
-        updateInfoToMain(data);
     }
     if (state === PICK || 
         (previousState === PICK && state === PICK)
@@ -112,8 +101,6 @@ export const updateGui = (data) => {
         updateInfoToAttack(data)
         }
 
-    if (state === "BattleEvalState")
-    {} // af
 
     if (state === "SwitchPokemonState"){
         renderSwitchLayout(data.state.player)

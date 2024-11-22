@@ -32,6 +32,9 @@ class JsonManipulator {
         if(state === "SwitchPokemonState"){
             
         }
+        if(state === "BatleEvalState"){
+          this.manipulateBattleEvalState(data);
+        }
     }
 
     pickPokemonManipulator(data, choice) {
@@ -90,28 +93,42 @@ class JsonManipulator {
     chooseAttackManipulator(data, choice) {
       let move = data.state.player.currentPokemon.moves.find(move => move.name === choice)
       if(move === undefined){
-        console.err("Move not found");
+        console.log("Move not found");
         return;
-      }
-      console.log("choosen move:", move)
-      console.log("Choice\n",JSON.stringify(data.state.player.choice, null,2));
+      } 
+      data.state.player.currentPokemon.currentMove = move;
       data.state.player.choice = {
         attackChoice: move
       };
-      console.log("Updated Choice: \n "+JSON.stringify(data.state.player.choice, null,2));
+      
+      this.manipulateBattleEvalState(data);
+    }
+
+    /* This function is only called by either attack-switch-item
+    states.
+    The move of the opponent is set
+    the state is set to BattleEval
+    (The class that calcualtes the round)
+    after posting the data another post
+    to confirm both choices needs to be done
+    This is for synchronization in multiplayer*/
+    manipulateBattleEvalState(data){
+      let move = data.state.opponent.currentPokemon.moves[Math.floor(Math.random()*data.state.opponent.currentPokemon.moves.length)];
+      if(move === undefined){
+        console.log("Move not found");
+        return;
+      }
+      data.state.opponent.currentPokemon.currentMove = move;
+      data.state.opponent.choice = {
+        attackChoice: move
+      };
 
       data.state.type = "BattleEvalState";
-      console.log("Updated Choice after changing data.state.type: \n "+JSON.stringify(data.state.player.choice, null,2));
-
-      data.state.player.currentPokemon.currentMove = move;
-      console.log("Updated player after changing ...currentMove: \n "+JSON.stringify(data.state.player, null,2));
-
-
       let updData = JSON.stringify(data);
       console.log(updData);
       this.postUpdatedJson(updData);
-      //also post a random letter
-
+      //needs to send additional "ok" top process Round
+      //webSocketManager.sendMessage({"confirm": 1});
     }
 
     postUpdatedJson = (data) => {
