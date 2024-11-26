@@ -11563,3 +11563,439 @@ WARNING: Unmatched cancel notification for request id 3801
 2024.11.22 19:20:40 WARN  no build target for: /home/marvin/WT/pokeweb/app/controllers/HomeController.scala[0m
 2024.11.22 19:20:40 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
 2024.11.22 19:21:57 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 19:50:11 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 19:50:12 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 19:57:09 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 19:57:26 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+Nov 22, 2024 7:58:43 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+Nov 22, 2024 7:58:47 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+Nov 22, 2024 7:58:50 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+Nov 22, 2024 8:00:02 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+Nov 22, 2024 8:00:45 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+Nov 22, 2024 8:01:00 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+2024.11.22 20:01:11 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:01:11 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:01:11 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:01:19 INFO  Shutting down server[0m
+2024.11.22 20:01:19 INFO  shutting down Metals[0m
+2024.11.22 20:01:19 INFO  Exiting server[0m
+2024.11.22 20:02:04 INFO  Started: Metals version 1.4.1 in folders '/home/marvin/WT/pokeweb' for client Visual Studio Code 1.91.1.[0m
+2024.11.22 20:02:06 WARN  Flyway upgrade recommended: H2 2.3.232 is newer than this version of Flyway and support has not been tested. The latest supported version of H2 is 2.2.224.[0m
+2024.11.22 20:02:06 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:02:12 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:03:03 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:03:14 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:03:20 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:03:21 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:03:21 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:03:23 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:03:26 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:03:27 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:03:27 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:03:29 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:03:29 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:03:29 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:03:29 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:03:30 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:03:30 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:03:33 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:03:33 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+Nov 22, 2024 8:03:33 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 33
+2024.11.22 20:03:33 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:03:35 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:03:35 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:03:35 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:03:36 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:03:36 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:03:36 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:03:36 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:03:38 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:03:38 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:03:38 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:03:38 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:03:39 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:03:39 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:03:39 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:03:39 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:03:40 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:03:41 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:03:42 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:03:42 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:03:43 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:03:43 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:03:43 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:03:44 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:03:43 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:03:44 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:03:44 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:03:45 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:03:45 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:03:45 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:03:47 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:03:47 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:03:47 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:03:47 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:03:47 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:03:48 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:03:48 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:03:49 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:03:49 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:03:49 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:03:49 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:03:49 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:03:50 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:03:50 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:03:50 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:03:50 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:03:51 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:03:51 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:03:51 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:03:52 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:03:53 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:03:53 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:03:53 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:03:53 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:03:53 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:03:54 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:03:54 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:03:55 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:04:00 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:04:00 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:04:01 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:04:01 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:04:01 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:04:01 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:04:02 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:04:02 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:04:02 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:04:03 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:04:02 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:04:02 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:04:02 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:04:02 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:04:02 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+Nov 22, 2024 8:04:03 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /home/marvin/WT/pokeweb/.metals/.reports/metals-full/2024-11-22/r_compiler-error_20-04-03-809.md
+Nov 22, 2024 8:04:03 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /home/marvin/WT/pokeweb/.metals/.reports/metals-full/2024-11-22/r_compiler-error_20-04-03-964.md
+2024.11.22 20:04:03 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:04:04 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+Nov 22, 2024 8:04:04 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /home/marvin/WT/pokeweb/.metals/.reports/metals-full/2024-11-22/r_compiler-error_20-04-04-549.md
+Nov 22, 2024 8:04:04 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /home/marvin/WT/pokeweb/.metals/.reports/metals-full/2024-11-22/r_compiler-error_20-04-04-768.md
+2024.11.22 20:04:08 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:04:08 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:07:18 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:07:19 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:07:19 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:07:19 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:07:21 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:07:21 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:07:21 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:07:21 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:07:21 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:07:22 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:07:23 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:07:23 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:07:23 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:07:23 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:07:23 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:07:23 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:07:23 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:07:23 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:07:24 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:07:24 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:07:24 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:07:24 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:07:24 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:07:25 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:07:25 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:07:25 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:07:25 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:07:25 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:07:25 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:07:26 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:07:27 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:07:27 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:07:27 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:07:27 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:07:27 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:07:27 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:07:29 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:07:29 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:07:29 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:07:29 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:07:29 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:07:29 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:07:29 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:07:30 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:07:30 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:07:30 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:07:30 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:07:30 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:07:30 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:07:31 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:07:58 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:07:58 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:08:00 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:08:00 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:08:00 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:08:02 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:08:02 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:08:02 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:08:02 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:08:02 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:08:02 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:08:02 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:08:02 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:08:02 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:08:02 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:08:02 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:08:02 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:08:03 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:08:03 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:08:03 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:08:02 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:08:03 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:08:03 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:08:03 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:08:26 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:08:26 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:08:26 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:08:28 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:08:28 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:08:29 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:08:29 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:08:29 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:08:29 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:08:29 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:08:29 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:08:29 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:08:29 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:08:29 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:08:29 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:08:29 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:08:30 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:08:30 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:08:30 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:08:30 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:08:30 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:08:31 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:08:31 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:08:31 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:08:31 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:10:02 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:10:02 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:10:04 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:10:07 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:10:09 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:10:09 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:10:11 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:10:11 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:14:14 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+Nov 22, 2024 8:14:44 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+2024.11.22 20:14:51 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:14:51 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:14:51 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:14:52 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:20:59 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:20:59 WARN  no build target for: /home/marvin/WT/pokeweb/app/controllers/HomeController.scala[0m
+2024.11.22 20:20:59 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:22:25 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:22:25 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:22:25 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:22:26 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:22:28 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:22:28 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:22:29 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:22:28 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:22:28 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:22:28 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:22:28 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:22:29 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:22:30 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:22:30 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:22:30 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:22:31 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:22:31 WARN  no build target for: /home/marvin/WT/pokeweb/app/controllers/HomeController.scala[0m
+2024.11.22 20:22:31 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:22:56 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:25:35 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:25:35 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+Nov 22, 2024 8:25:36 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 393
+2024.11.22 20:25:56 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:25:56 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:25:59 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:25:59 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:25:59 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:26:00 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:26:00 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:26:09 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:26:09 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:26:09 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+Nov 22, 2024 8:26:09 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 457
+2024.11.22 20:26:10 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:26:10 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:26:10 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:26:10 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:26:10 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:26:10 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:26:11 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+Nov 22, 2024 8:26:11 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 470
+2024.11.22 20:26:11 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:26:11 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:26:12 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:26:12 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:26:12 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:26:13 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:26:14 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:26:16 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:26:16 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:26:16 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:26:16 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:26:16 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:26:18 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:26:18 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:26:18 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:26:19 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:26:19 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:26:19 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:26:19 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:26:21 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:26:21 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:26:22 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:26:30 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:26:30 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:26:32 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:26:32 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:26:32 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:26:33 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:26:33 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:26:33 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:26:33 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:26:33 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:26:33 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:26:34 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:26:35 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:26:34 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:26:34 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:26:35 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:26:37 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:26:53 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:26:54 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:26:54 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:26:57 WARN  no build target for: /home/marvin/WT/pokeweb/app/controllers/HomeController.scala[0m
+2024.11.22 20:26:57 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:26:57 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:29:40 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:29:40 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:29:40 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:29:40 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:29:40 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:29:41 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:29:41 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:29:41 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:29:41 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:29:43 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:29:43 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:29:43 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:29:43 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:29:43 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:29:43 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:29:43 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:29:44 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:29:44 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:29:44 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:29:44 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:29:44 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:29:45 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:29:47 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:29:47 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:29:47 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:29:48 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:29:48 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:29:49 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:29:51 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:29:51 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:29:51 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:29:51 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:29:51 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:29:52 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:29:52 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:29:52 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:29:52 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:29:52 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:29:52 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:29:53 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+Nov 22, 2024 8:29:53 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 634
+2024.11.22 20:29:53 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:29:53 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:29:53 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:29:54 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:29:53 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:29:54 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:29:54 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:29:55 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:30:05 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:30:05 WARN  no build target for: /home/marvin/WT/pokeweb/app/controllers/HomeController.scala[0m
+2024.11.22 20:30:05 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.22 20:30:08 INFO  Shutting down server[0m
+2024.11.22 20:30:08 INFO  shutting down Metals[0m
+2024.11.22 20:30:08 INFO  Exiting server[0m
+2024.11.22 20:30:08 ERROR Unexpected error initializing server: 
+org.eclipse.lsp4j.jsonrpc.ResponseErrorException: Request window/showMessageRequest failed with message: Canceled
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleResponse(RemoteEndpoint.java:220)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.consume(RemoteEndpoint.java:204)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:185)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:97)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:114)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.lang.Thread.run(Thread.java:1583)
+[0m
+2024.11.26 08:17:57 INFO  Started: Metals version 1.4.1 in folders '/home/marvin/WT/pokeweb' for client Visual Studio Code 1.91.1.[0m
+2024.11.26 08:17:59 WARN  Flyway upgrade recommended: H2 2.3.232 is newer than this version of Flyway and support has not been tested. The latest supported version of H2 is 2.2.224.[0m
+2024.11.26 08:19:40 INFO  Started: Metals version 1.4.1 in folders '/home/marvin/WT/pokeweb' for client Visual Studio Code 1.91.1.[0m
+2024.11.26 08:19:41 WARN  Flyway upgrade recommended: H2 2.3.232 is newer than this version of Flyway and support has not been tested. The latest supported version of H2 is 2.2.224.[0m
+2024.11.26 08:19:41 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.26 08:19:45 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.26 08:22:02 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.26 08:22:02 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.26 08:22:03 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.26 08:22:08 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.26 08:22:08 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.26 08:22:08 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.26 08:22:08 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.26 08:22:08 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.26 08:22:09 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.26 08:22:09 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.26 08:22:09 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.26 08:22:47 WARN  no build target for: /home/marvin/WT/pokeweb/app/controllers/HomeController.scala[0m
+2024.11.26 08:22:47 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.26 08:22:47 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.26 08:22:54 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.26 08:23:04 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.26 08:24:38 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.26 08:29:26 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.26 08:29:42 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.26 08:29:46 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.26 08:29:46 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.26 08:29:48 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.26 08:37:15 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.26 08:38:15 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.26 08:38:48 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m

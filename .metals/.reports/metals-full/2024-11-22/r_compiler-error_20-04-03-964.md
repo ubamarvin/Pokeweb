@@ -1,3 +1,16 @@
+file://<WORKSPACE>/app/controllers/HomeController.scala
+### java.lang.IndexOutOfBoundsException: -1
+
+occurred in the presentation compiler.
+
+presentation compiler configuration:
+
+
+action parameters:
+offset: 4051
+uri: file://<WORKSPACE>/app/controllers/HomeController.scala
+text:
+```scala
 //HomeController.scala
 
 package controllers
@@ -144,7 +157,7 @@ class HomeController @Inject()(val controllerComponents: ControllerComponents)(i
     val session = request.session
     ActorFlow.actorRef {out => 
       println("\n\n\n\n Connect received \n\n\n\n");
-      PokemonWebSocketActorFactory.create(out);
+      PokemonWebSocketActorFactory.create(out, se@@);
     }}
 
 
@@ -168,3 +181,23 @@ class HomeController @Inject()(val controllerComponents: ControllerComponents)(i
     Ok(views.html.index())
   }
 }
+
+```
+
+
+
+#### Error stacktrace:
+
+```
+scala.collection.LinearSeqOps.apply(LinearSeq.scala:129)
+	scala.collection.LinearSeqOps.apply$(LinearSeq.scala:128)
+	scala.collection.immutable.List.apply(List.scala:79)
+	dotty.tools.dotc.util.Signatures$.applyCallInfo(Signatures.scala:244)
+	dotty.tools.dotc.util.Signatures$.computeSignatureHelp(Signatures.scala:101)
+	dotty.tools.dotc.util.Signatures$.signatureHelp(Signatures.scala:88)
+	dotty.tools.pc.SignatureHelpProvider$.signatureHelp(SignatureHelpProvider.scala:47)
+	dotty.tools.pc.ScalaPresentationCompiler.signatureHelp$$anonfun$1(ScalaPresentationCompiler.scala:422)
+```
+#### Short summary: 
+
+java.lang.IndexOutOfBoundsException: -1
