@@ -87,7 +87,7 @@ export const updateGui = (data) => {
         updateInfoToMain();
     }
     if (state === PICK || 
-        (previousState === PICK && state === PICK)
+        (previousState === PICK && state === PICK) /////here it starts
     ){
         console.log("renderPick")
         renderPickState(data);
