@@ -23,6 +23,9 @@ import org.apache.pekko.stream.Materializer
 import play.api.libs.streams.ActorFlow
 
 import scala.swing.Reactor
+// Thread Save HashMap
+import scala.collection.concurrent.TrieMap
+
 
 
 
@@ -88,19 +91,26 @@ class HomeController @Inject()(val controllerComponents: ControllerComponents)(i
   }
 
   //_________WEBSOCKET_________________________________________________________
-  
+  object ConnectionManager {
+    val clientConnections: TrieMap[String, ActorRef] = TrieMap.empty
+  }
   
   
   // no reactions as of yet. Will be needed for 1 vs 1 mode
-  class PokemonWebSocketActor(out: ActorRef, gameController: ControllerInterface) extends Actor with Observer{
-    gameController.add(this)
+  class PokemonWebSocketActor(out: ActorRef, gameController: ControllerInterface, clientId: String) extends Actor with Observer{
+    //gameController.add(this)
+    println("WebSocketActor of " + clientId);
 
+    
     override def update: Unit = {
-      println("\n\n Observer.update in WebSocket \n\n");
+      //println("\n\n Observer.update in WebSocket \n\n");
+      //
       this.sendJsonToClient;
     }
+      
     
     override def preStart(): Unit = {
+      ConnectionManager.clientConnections.put(clientId, out)
       sendJsonToClient;
     }
 
@@ -109,16 +119,17 @@ class HomeController @Inject()(val controllerComponents: ControllerComponents)(i
       case json: JsValue =>
         try {
           if((json \ "state" \ "type").asOpt[String].contains("BattleEvalState")){
-            println("\n\n\n Battle State in Server detected \n\n\n”");
+            println("\n\n\nBattle State in Server detected \n\n\n”");
             gameController.setGameJson(json);
-            gameController.handleInput(" ");
+            gameController.handleInput(" "); //<---- this fucks it up
+            sendJsonToClient;
+          }else {
+            println("\n\nReceived Json in receive");
+            gameController.setGameJson(json)
+            println("\n\nsetgameJson() in receive");
+            sendJsonToClient;
+            println("\n\nSent updJson Client");
           }
-          
-          println("\n\n Received Json in receive");
-          gameController.setGameJson(json)
-          println("\n\n setgameJson() in receive");
-          out ! (gameController.getGameJson)
-          println("\n\n Sent updJson Client");
         } catch {
           case e: Exception =>
             println(e);
@@ -127,24 +138,32 @@ class HomeController @Inject()(val controllerComponents: ControllerComponents)(i
     }
 
     def sendJsonToClient = {
-      println("\n\n Pushing initial Json to client");
-      out ! (gameController.getGameJson);
-      println("\n\n pushed initial Json to client");
+      ConnectionManager.clientConnections.get(clientId).foreach { ref =>
+        if (ref == out) {
+          println(s"\n\nPushing Json to clientId $clientId\n\n");
+          ref ! (gameController.getGameJson);
+        }else {
+          println(s"Skipping update for client $clientId; not the requester")
+        }
+      }
     }
   }
 
   object PokemonWebSocketActorFactory {
-    def create(out: ActorRef) = {
-      Props(new PokemonWebSocketActor(out, gameController));
+    def create(out: ActorRef, clientId: String) = {
+      Props(new PokemonWebSocketActor(out, gameController, clientId));
     }
   }
 
   //                                                
   def socket() = WebSocket.accept[JsValue, JsValue] { request  =>
     val session = request.session
+    val clientId = session.get("clientId").getOrElse(java.util.UUID.randomUUID().toString)
+
     ActorFlow.actorRef {out => 
       println("\n\n\n\n Connect received \n\n\n\n");
-      PokemonWebSocketActorFactory.create(out);
+      println(s"New connection with clientId: $clientId")
+      PokemonWebSocketActorFactory.create(out, clientId);
     }}
 
 
