@@ -9,7 +9,7 @@ async function fetchPokemonData(name) {
             throw new Error(`Network response was not ok`);
         }
         const pokemon = await response.json();
-        console.log("found:" + name);
+        //console.log("found:" + name);
         return {
             id: pokemon.id,
             srcFront: pokemon.sprites.front_default,
@@ -17,7 +17,7 @@ async function fetchPokemonData(name) {
             name: pokemon.name.toUpperCase()
         };
     } catch (error) {
-        console.log("not found: " + name);
+        //console.log("not found: " + name);
         console.log(error.message);
         return null;
     }

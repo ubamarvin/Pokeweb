@@ -1,8 +1,14 @@
 
 <script setup>
 import { RouterLink, RouterView } from 'vue-router'
+/**Fetching and Storing pokeData globally
+ * Making it available across components and modules
+ * Fetching at Top Component because all sub-comp are dependent on it
+ */
+import { usePokemonStore } from '../../stores/pokeapifetcher/pokemonStore.js';
+const pokemonStore = usePokemonStore();
+pokemonStore.getPokeData()
 </script>
-
 <template>
     <header>
       <div class="wrapper">
@@ -31,6 +37,17 @@ import { RouterLink, RouterView } from 'vue-router'
         </div>
       </div>
     </header>
-  
-    <RouterView />
+      <RouterView class ="Content"/>
   </template>
+  <style>
+
+.Content {
+    flex: 1;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+</style>
+
