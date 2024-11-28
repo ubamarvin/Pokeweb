@@ -9,6 +9,7 @@ async function fetchPokemonData(name) {
             throw new Error(`Network response was not ok`);
         }
         const pokemon = await response.json();
+        console.log("found:" + name);
         return {
             id: pokemon.id,
             srcFront: pokemon.sprites.front_default,
@@ -16,6 +17,7 @@ async function fetchPokemonData(name) {
             name: pokemon.name.toUpperCase()
         };
     } catch (error) {
+        console.log("not found: " + name);
         console.log(error.message);
         return null;
     }
@@ -27,8 +29,8 @@ async function fetchPokemonData(name) {
 export async function fetchAllPokemons() {
     try {
         const promises = pokeNames.map(name => fetchPokemonData(name.toLowerCase()));
-        this.results = await Promise.all(promises);
-        return this.results.filter((pokemon) => pokemon !== null);
+        const results = await Promise.all(promises);
+        return results.filter((pokemon) => pokemon !== null);
     } catch (error) {
         console.error("Error fetching all Pokemon from Api: ", error.message);
     } 
