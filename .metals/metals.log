@@ -13576,3 +13576,15 @@ WARNING: Unmatched cancel notification for request id 2974
 2024.11.27 11:01:05 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
 2024.11.27 11:01:09 INFO  time: code lens generation in 4.47s[0m
 2024.11.27 11:02:31 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+Nov 27, 2024 11:13:02 AM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+Nov 27, 2024 11:31:18 AM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+2024.11.27 11:31:34 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.27 11:31:34 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.27 11:31:34 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.27 11:31:35 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.27 11:31:36 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.27 11:31:42 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.11.28 05:42:56 INFO  Started: Metals version 1.4.1 in folders '/home/marvin/WT/pokeweb' for client Visual Studio Code 1.91.1.[0m
+2024.11.28 05:42:58 WARN  Flyway upgrade recommended: H2 2.3.232 is newer than this version of Flyway and support has not been tested. The latest supported version of H2 is 2.2.224.[0m

@@ -1,5 +1,5 @@
 <script setup>
-import TuiComp from '../components/tui/TuiComp.vue'
+import TuiComp from '../components/tuiComponent/TuiComp.vue'
 </script>
 
 <template>

@@ -2,42 +2,61 @@
   "state" : {
     "type" : "MainState",
     "player" : {
-      "pokemons" : [ ],
-      "currentPokemon" : {
-        "id" : 7,
-        "name" : "squirtle",
-        "hp" : 15,
+      "pokemons" : [ {
+        "id" : 12,
+        "name" : "charizard",
+        "hp" : 100,
         "moves" : [ {
-          "name" : "waterjet",
+          "name" : "firebreath",
           "power" : 50,
-          "moveType" : "water",
+          "moveType" : "fire",
           "statusEffect" : "none"
         }, {
+          "name" : "burn",
+          "power" : 0,
+          "moveType" : "fire",
+          "statusEffect" : "burn"
+        } ],
+        "speed" : 100,
+        "pokeType" : "fire",
+        "currentMove" : {
+          "name" : "empty",
+          "power" : 0,
+          "moveType" : "normal",
+          "statusEffect" : "none"
+        },
+        "status" : {
+          "stateType" : "NormalState"
+        }
+      } ],
+      "currentPokemon" : {
+        "id" : 1,
+        "name" : "pikachu",
+        "hp" : 100,
+        "moves" : [ {
           "name" : "tackle",
           "power" : 50,
           "moveType" : "normal",
           "statusEffect" : "none"
+        }, {
+          "name" : "thunder",
+          "power" : 70,
+          "moveType" : "elektro",
+          "statusEffect" : "none"
         } ],
-        "speed" : 40,
-        "pokeType" : "water",
+        "speed" : 30,
+        "pokeType" : "elektro",
         "currentMove" : {
-          "name" : "waterjet",
-          "power" : 50,
-          "moveType" : "water",
+          "name" : "empty",
+          "power" : 0,
+          "moveType" : "normal",
           "statusEffect" : "none"
         },
         "status" : {
           "stateType" : "NormalState"
         }
       },
-      "choice" : {
-        "attackChoice" : {
-          "name" : "waterjet",
-          "power" : 50,
-          "moveType" : "water",
-          "statusEffect" : "none"
-        }
-      }
+      "choice" : { }
     },
     "opponent" : {
       "pokemons" : [ {
@@ -65,7 +84,7 @@
       "currentPokemon" : {
         "id" : 4,
         "name" : "eevee",
-        "hp" : 50,
+        "hp" : 100,
         "moves" : [ {
           "name" : "bodyslam",
           "power" : 30,
@@ -80,8 +99,8 @@
         "speed" : 35,
         "pokeType" : "fight",
         "currentMove" : {
-          "name" : "kick",
-          "power" : 75,
+          "name" : "empty",
+          "power" : 0,
           "moveType" : "normal",
           "statusEffect" : "none"
         },
@@ -89,15 +108,8 @@
           "stateType" : "NormalState"
         }
       },
-      "choice" : {
-        "attackChoice" : {
-          "name" : "kick",
-          "power" : 75,
-          "moveType" : "normal",
-          "statusEffect" : "none"
-        }
-      }
+      "choice" : { }
     },
-    "roundReport" : "-squirtles attack waterjet was executed normally\n-eevees attack kick was executed normally\n"
+    "roundReport" : ""
   }
 }

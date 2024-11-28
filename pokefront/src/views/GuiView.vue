@@ -1,5 +1,5 @@
 <script setup>
-import GuiComp from '../components/gui/GuiComp.vue'
+import GuiComp from '../components/guiComponent/GuiComp.vue'
 </script>
 
 <template>

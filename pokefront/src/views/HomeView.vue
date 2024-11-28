@@ -1,6 +1,6 @@
 <script setup>
 //import HomeComp from '../components/home/HomeComp.vue';
-import HomeContainer from '@/components/home/homeContainer/HomeContainer.vue';
+import HomeContainer from '@/components/homeComponent/HomeContainer.vue';
 </script>
 <template>
   <main>
