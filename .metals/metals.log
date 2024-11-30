@@ -13588,3 +13588,6 @@ INFO: Unsupported notification method: $/setTrace
 2024.11.27 11:31:42 INFO  no build target found for /home/marvin/WT/pokeweb/app/controllers/HomeController.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
 2024.11.28 05:42:56 INFO  Started: Metals version 1.4.1 in folders '/home/marvin/WT/pokeweb' for client Visual Studio Code 1.91.1.[0m
 2024.11.28 05:42:58 WARN  Flyway upgrade recommended: H2 2.3.232 is newer than this version of Flyway and support has not been tested. The latest supported version of H2 is 2.2.224.[0m
+2024.11.30 10:34:11 INFO  Started: Metals version 1.4.1 in folders '/home/marvin/WT/pokeweb' for client Visual Studio Code 1.91.1.[0m
+2024.11.30 10:34:11 INFO  time: initialize in 0.14s[0m
+2024.11.30 10:34:16 WARN  Flyway upgrade recommended: H2 2.3.232 is newer than this version of Flyway and support has not been tested. The latest supported version of H2 is 2.2.224.[0m

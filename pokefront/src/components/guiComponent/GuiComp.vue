@@ -1,9 +1,40 @@
 <script setup>
 import BattleComp from "./battleComponent/BattleComp.vue"
+import PickComp from "./pickComponent/PickComp.vue"
+import { ref, onMounted, onUnmounted, computed} from "vue";
+import webSocketManager from "../../util/webSocketManager.js"
+
+// ref is like state in React
+const gameJson = ref(null);
+
+const stateToComp = {
+    "PickPokemonState": PickComp,
+    "MainState": BattleComp
+};
+// like memo or useEffect with dependcy array in React.
+// Is computed only when
+// ref on which it depends changes
+const currentComp = computed(() => {
+    return gameJson.value?.state?.type ? stateToComp[gameJson.value.state.type] || null : null;
+});
+onMounted(() => {
+    const handleUpdate = (data) => {
+        gameJson.value = data;
+    }
+
+    webSocketManager.setListener(handleUpdate);
+
+    onUnmounted(() => {
+        console.log("GuiGone");
+    })
+
+});
 </script>
 <template>
     <div class="gui-container">
-    <BattleComp />
+        <div v-if="!gameJson">Loading data</div>
+
+        <component v-else :is="currentComp" :game-data="gameJson" />
     </div>
 </template>
 

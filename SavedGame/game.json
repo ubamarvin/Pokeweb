@@ -2,50 +2,24 @@
   "state" : {
     "type" : "MainState",
     "player" : {
-      "pokemons" : [ {
-        "id" : 12,
-        "name" : "charizard",
-        "hp" : 100,
-        "moves" : [ {
-          "name" : "firebreath",
-          "power" : 50,
-          "moveType" : "fire",
-          "statusEffect" : "none"
-        }, {
-          "name" : "burn",
-          "power" : 0,
-          "moveType" : "fire",
-          "statusEffect" : "burn"
-        } ],
-        "speed" : 100,
-        "pokeType" : "fire",
-        "currentMove" : {
-          "name" : "empty",
-          "power" : 0,
-          "moveType" : "normal",
-          "statusEffect" : "none"
-        },
-        "status" : {
-          "stateType" : "NormalState"
-        }
-      } ],
+      "pokemons" : [ ],
       "currentPokemon" : {
-        "id" : 1,
-        "name" : "pikachu",
+        "id" : 16,
+        "name" : "golduck",
         "hp" : 100,
         "moves" : [ {
-          "name" : "tackle",
+          "name" : "waterjet",
           "power" : 50,
-          "moveType" : "normal",
+          "moveType" : "water",
           "statusEffect" : "none"
         }, {
-          "name" : "thunder",
-          "power" : 70,
-          "moveType" : "elektro",
+          "name" : "bodyslam",
+          "power" : 30,
+          "moveType" : "normal",
           "statusEffect" : "none"
         } ],
-        "speed" : 30,
-        "pokeType" : "elektro",
+        "speed" : 55,
+        "pokeType" : "water",
         "currentMove" : {
           "name" : "empty",
           "power" : 0,

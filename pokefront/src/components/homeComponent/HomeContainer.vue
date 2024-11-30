@@ -1,5 +1,5 @@
 <script setup>
-import ImageContainer from './ImageContainer..vue/ImageContainer.vue';
+import ImageContainer from './ImageContainer/ImageContainer.vue';
 /**
  * At this point, usePokemonStore.fetchAllPokemons is already called
  */
