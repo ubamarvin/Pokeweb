@@ -1,25 +1,25 @@
 {
   "state" : {
-    "type" : "MainState",
+    "type" : "ChooseAttackState",
     "player" : {
       "pokemons" : [ ],
       "currentPokemon" : {
-        "id" : 16,
-        "name" : "golduck",
+        "id" : 12,
+        "name" : "charizard",
         "hp" : 100,
         "moves" : [ {
-          "name" : "waterjet",
+          "name" : "firebreath",
           "power" : 50,
-          "moveType" : "water",
+          "moveType" : "fire",
           "statusEffect" : "none"
         }, {
-          "name" : "bodyslam",
-          "power" : 30,
-          "moveType" : "normal",
-          "statusEffect" : "none"
+          "name" : "burn",
+          "power" : 0,
+          "moveType" : "fire",
+          "statusEffect" : "burn"
         } ],
-        "speed" : 55,
-        "pokeType" : "water",
+        "speed" : 100,
+        "pokeType" : "fire",
         "currentMove" : {
           "name" : "empty",
           "power" : 0,
@@ -83,7 +83,6 @@
         }
       },
       "choice" : { }
-    },
-    "roundReport" : ""
+    }
   }
 }

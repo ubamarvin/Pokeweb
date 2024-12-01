@@ -9,22 +9,31 @@ const gameJson = ref(null);
 
 const stateToComp = {
     "PickPokemonState": PickComp,
-    "MainState": BattleComp
+    "MainState": BattleComp,
+    "ChooseAttackState" : BattleComp
 };
 // like memo or useEffect with dependcy array in React.
 // Is computed only when
 // ref on which it depends changes
 const currentComp = computed(() => {
+    console.log("computed:");
     return gameJson.value?.state?.type ? stateToComp[gameJson.value.state.type] || null : null;
 });
 onMounted(() => {
+    console.log("GuiComp Mounts");
     const handleUpdate = (data) => {
+        console.log("on mount" + data);
         gameJson.value = data;
+        console.log("fugg");
+        if(!data){
+            console.log("nodata");
+        }
     }
 
     webSocketManager.setListener(handleUpdate);
 
     onUnmounted(() => {
+        webSocketManager.removeListener();
         console.log("GuiGone");
     })
 
@@ -304,7 +313,7 @@ onMounted(() => {
    display: grid;
    grid-template-columns: 1fr;
    grid-template-rows: 1fr 1fr;
-   height: 75%;
+   height: 100%;
    position: relative;
    z-index: -1;
 }

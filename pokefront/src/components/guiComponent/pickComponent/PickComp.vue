@@ -32,7 +32,6 @@ function findPokemonByName(pokemonName) {
 
 
 function selectPokemonClick(pokemon) {
-    console.log(pokemon);
     jsonManipulator.manipulateJson(data.gameData, pokemon.name)
 }
 

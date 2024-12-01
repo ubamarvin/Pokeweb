@@ -1,9 +1,25 @@
 <script setup>
 import ButtonComp from "./button/ButtonComp.vue"
+import jsonManipulator from "@/util/jsonManipulator";
+
+const data = defineProps({
+    gameData:{
+        type: Object,
+        required: true,
+    }
+});
+function handleClick(choice){
+    jsonManipulator.manipulateJson(data.gameData, choice);
+}
+//but why
+const attack = "ChooseAttackState";
 </script>
 <template>
     <div class="button-box">
-        <ButtonComp class="attack-btn"/>
+        <ButtonComp
+        class="attack-btn"
+        @click="handleClick(attack)"
+        />
         <ButtonComp class="switch-btn"/>
         <ButtonComp class="items-btn"/>
         <ButtonComp class="run-btn"/>

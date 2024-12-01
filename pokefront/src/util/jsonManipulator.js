@@ -133,8 +133,8 @@ class JsonManipulator {
 
     postUpdatedJson = (data) => {
       console.log("sending to server");
-      const obj = JSON.parse(data)
-      console.log(JSON.stringify(obj, null,2));
+      //const obj = JSON.parse(data)
+      //console.log(JSON.stringify(obj, null,2));
       webSocketManager.sendMessage(data);
     }
 

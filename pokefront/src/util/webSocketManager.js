@@ -57,6 +57,10 @@ class WebSocketManager {
             }
         }
 
+        removeListener() {
+            this.listener = null;
+        }
+
         //Client to Server
         sendMessage(json) {
             if (this.socket.readyState !== WebSocket.OPEN) {
