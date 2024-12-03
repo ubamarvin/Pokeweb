@@ -93,7 +93,7 @@ class JsonManipulator {
     chooseAttackManipulator(data, choice) {
       let move = data.state.player.currentPokemon.moves.find(move => move.name === choice)
       if(move === undefined){
-        console.log("Move not found");
+        console.log("Move "+ choice +" not found");
         return;
       } 
       data.state.player.currentPokemon.currentMove = move;

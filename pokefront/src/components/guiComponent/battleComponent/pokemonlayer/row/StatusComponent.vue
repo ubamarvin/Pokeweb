@@ -16,8 +16,9 @@ const stateMap = {
 <template>
     <div >
         <p>{{ pokemon.name }}</p>
-        <p>{{ pokemon.hp }}</p>
+        <p>Health: {{ pokemon.hp }} / 100</p>
         <p>{{ stateMap[pokemon.status.stateType] }}</p>
         <p>{{ pokemon.type }}</p>
     </div>
 </template>
+

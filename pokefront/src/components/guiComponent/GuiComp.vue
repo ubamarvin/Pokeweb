@@ -97,8 +97,9 @@ onMounted(() => {
     }
 
     .status {
-        font-size: 12px;
+        font-size: 18px;
         font-weight: bold;
+        color: white;
     }
 
     .pl-image-box {
