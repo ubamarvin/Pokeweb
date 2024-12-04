@@ -6,7 +6,8 @@ import {updateGui} from "./gui.js";
 class WebSocketManager {
     constructor() {
         if (!WebSocketManager.instance) {
-            this.socket = new WebSocket("ws://localhost:9000/socket");
+            const wsUrl = process.env.WS_URL || "ws://localhost:9000/socket";
+            this.socket = new WebSocket(wsUrl);
             this.init();
             this.handleMessage
             WebSocketManager.instance = this;
