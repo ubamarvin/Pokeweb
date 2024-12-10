@@ -1,13 +1,13 @@
-# Use an official JDK image. Version must match with image pulled bellow
+#Version must match with image pulled bellow
 FROM sbtscala/scala-sbt:eclipse-temurin-jammy-22_36_1.10.0_3.4.2 AS builder
 
 # Set working directory
 WORKDIR /app
 
-# Install curl and gnupg2 (for downloading sbt .deb package)
+
 RUN apt-get update && apt-get install -y curl gnupg2
 
-# Download sbt .deb package
+
 RUN curl -sL https://dlcdn.apache.org/sbt/debian/sbt-1.7.3.deb -o sbt.deb
 
 # Install sbt using dpkg and resolve missing dependencies
@@ -21,16 +21,16 @@ COPY lib /app/lib
 # Download and cache dependencies
 RUN sbt update
 
-# Copy the rest of the application code
+# Copy the application code
 COPY . /app
 
-# Ensure the SavedGame folder exists
+# Ensure the SavedGame folder exists for Json maagic
 RUN mkdir -p /app/SavedGame
 
 # Build and stage the application
 RUN sbt stage
 
-# Use a new, lightweight image for the final stage. Version must match with im above
+# Lightweight image for actual run, Version must match with im above
 FROM openjdk:22-jdk-slim
 
 # Set working directory for the app
