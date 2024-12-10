@@ -6,7 +6,7 @@
 class WebSocketManager {
     constructor() {
         if (!WebSocketManager.instance) {
-            this.socket = new WebSocket("ws://localhost:9000/socket");
+            this.socket = new WebSocket("wss://pokeweb-cvt9.onrender.com/socket");
             this.init();
             this.handleMessage
             this.eventBuffer = [];
