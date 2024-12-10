@@ -48,5 +48,9 @@ be -> choice correctly populated
 https://www.youtube.com/watch?v=JR1OjCoWzEs
 
 
+####
+team x is using UML Diagramms. theyre saying it helps them think better, reduces work time and makes teamwork easier.
+
+
 
 

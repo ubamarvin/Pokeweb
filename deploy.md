@@ -66,7 +66,7 @@ COPY target/scala-3.4.1/pokeweb.jar /app/pokeweb.jar
 CMD ["java", "-jar","-Dserver.port=8080", "/app/pokeweb.jar"]
  */
  or
- 
+
 
 
 docker build -t pokeweb .
@@ -76,3 +76,4 @@ docker run -p 9000:9000 pokeweb
 ### PlayServer
 --set name in build to lowercase (else docker wont find)
 --set app secret in app*.conf
+--set routesfilter as ENV var
