@@ -6,7 +6,7 @@ import {updateGui} from "./gui.js";
 class WebSocketManager {
     constructor() {
         if (!WebSocketManager.instance) {
-            const wsUrl = process.env.WS_URL || "ws://localhost:9000/socket";
+            const wsUrl = "wss://pokeweb-cvt9.onrender.com/socket" || "ws://localhost:9000/socket";
             this.socket = new WebSocket(wsUrl);
             this.init();
             this.handleMessage
