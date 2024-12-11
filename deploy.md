@@ -77,3 +77,6 @@ docker run -p 9000:9000 pokeweb
 --set name in build to lowercase (else docker wont find)
 --set app secret in app*.conf
 --set routesfilter as ENV var
+
+### PWA
+--delete cookies or something

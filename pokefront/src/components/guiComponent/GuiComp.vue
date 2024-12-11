@@ -3,6 +3,7 @@ import BattleComp from "./battleComponent/BattleComp.vue"
 import PickComp from "./pickComponent/PickComp.vue"
 import { ref, onMounted, onUnmounted, computed} from "vue";
 import webSocketManager from "../../util/webSocketManager.js"
+import DeadComponent from "./deadComponent/DeadComponent.vue";
 
 // ref is like state in React
 const gameJson = ref(null);
@@ -10,7 +11,8 @@ const gameJson = ref(null);
 const stateToComp = {
     "PickPokemonState": PickComp,
     "MainState": BattleComp,
-    "ChooseAttackState" : BattleComp
+    "ChooseAttackState" : BattleComp,
+    "YourDeadState" : DeadComponent
 };
 // like memo or useEffect with dependcy array in React.
 // Is computed only when

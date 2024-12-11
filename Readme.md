@@ -1,9 +1,21 @@
+### General Todos
+# Back
+- add multiplayer
+
+# Front
+- add deadState
+- add roundMsg
+- add loading screen
+- add Tui
+- styleHome
+
+
 ### Websockets
 -upd gui is double called 
 -> closed
 
 -attacks switch and whatever are not accepted via json
-    -> fileIojson 441 , convert also attack choice,
+p-> fileIojson 441 , convert also attack choice,
     -> game 214 call choice in controller
     -> fileToJson doesnt work as it should
     moves are not converted
