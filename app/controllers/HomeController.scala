@@ -111,6 +111,7 @@ class HomeController @Inject()(val controllerComponents: ControllerComponents)(i
     
     override def preStart(): Unit = {
       ConnectionManager.clientConnections.put(clientId, out)
+      gameController.newGame
       sendJsonToClient;
     }
 
