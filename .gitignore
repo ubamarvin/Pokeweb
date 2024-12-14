@@ -1,9 +1,12 @@
 logs
 target
+.env
 /.bsp
 /.idea
 /.idea_modules
 /.classpath
 /.project
 /.settings
+.metals/
+
 /RUNNING_PID

@@ -69,8 +69,13 @@ class HomeController @Inject()(val controllerComponents: ControllerComponents)(i
   def gui() = Action {
     Ok(views.html.gui())
   }
-  //Post
+  
+ //_________MISCELLANEOUS_____________________________________________________
 
+  def newGame() = Action {
+    gameController.newGame;
+    Ok("newGame")
+  }
  //__________JSON_API__________________________________________________________
 
   def getJson() = Action {
@@ -111,6 +116,7 @@ class HomeController @Inject()(val controllerComponents: ControllerComponents)(i
     
     override def preStart(): Unit = {
       ConnectionManager.clientConnections.put(clientId, out)
+      gameController.newGame
       sendJsonToClient;
     }
 
@@ -123,7 +129,12 @@ class HomeController @Inject()(val controllerComponents: ControllerComponents)(i
             gameController.setGameJson(json);
             gameController.handleInput(" "); //<---- this fucks it up
             sendJsonToClient;
-          }else {
+          }else if((json \ "state" \ "type").asOpt[String].contains("YourDeadState")){
+            println("\n\n\nDead State in Server detected \n\n\n”");
+            gameController.newGame;
+            sendJsonToClient;
+          }
+          else {
             println("\n\nReceived Json in receive");
             gameController.setGameJson(json)
             println("\n\nsetgameJson() in receive");

@@ -1,9 +1,51 @@
 <script setup>
 import BattleComp from "./battleComponent/BattleComp.vue"
+import PickComp from "./pickComponent/PickComp.vue"
+import { ref, onMounted, onUnmounted, computed} from "vue";
+import webSocketManager from "../../util/webSocketManager.js"
+import DeadComponent from "./deadComponent/DeadComponent.vue";
+
+// ref is like state in React
+const gameJson = ref(null);
+
+const stateToComp = {
+    "PickPokemonState": PickComp,
+    "MainState": BattleComp,
+    "ChooseAttackState" : BattleComp,
+    "YourDeadState" : DeadComponent
+};
+// like memo or useEffect with dependcy array in React.
+// Is computed only when
+// ref on which it depends changes
+const currentComp = computed(() => {
+    console.log("computed:");
+    return gameJson.value?.state?.type ? stateToComp[gameJson.value.state.type] || null : null;
+});
+onMounted(() => {
+    console.log("GuiComp Mounts");
+    const handleUpdate = (data) => {
+        console.log("on mount" + data);
+        gameJson.value = data;
+        console.log("fugg");
+        if(!data){
+            console.log("nodata");
+        }
+    }
+
+    webSocketManager.setListener(handleUpdate);
+
+    onUnmounted(() => {
+        webSocketManager.removeListener();
+        console.log("GuiGone");
+    })
+
+});
 </script>
 <template>
     <div class="gui-container">
-    <BattleComp />
+        <div v-if="!gameJson">Loading data</div>
+
+        <component v-else :is="currentComp" :game-data="gameJson" />
     </div>
 </template>
 
@@ -57,8 +99,9 @@ import BattleComp from "./battleComponent/BattleComp.vue"
     }
 
     .status {
-        font-size: 12px;
+        font-size: 18px;
         font-weight: bold;
+        color: white;
     }
 
     .pl-image-box {
@@ -273,7 +316,7 @@ import BattleComp from "./battleComponent/BattleComp.vue"
    display: grid;
    grid-template-columns: 1fr;
    grid-template-rows: 1fr 1fr;
-   height: 75%;
+   height: 100%;
    position: relative;
    z-index: -1;
 }

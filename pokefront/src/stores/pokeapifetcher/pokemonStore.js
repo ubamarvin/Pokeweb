@@ -22,3 +22,4 @@ export const usePokemonStore = defineStore("pokemonStore", {
         },
     },
 });
+

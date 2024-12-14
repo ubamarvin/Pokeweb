@@ -19,6 +19,9 @@ GET /json                           controllers.HomeController.getJson()
 + nocsrf
 POST /json                          controllers.HomeController.postJson()
 
+#### DirectController
+GET /newGame                        controllers.HomeController.newGame()
+
 #### Websocket
 
 GET /socket                         controllers.HomeController.socket()
