@@ -1,68 +1,36 @@
-### General Todos
-# Back
-- add multiplayer
+# Projektbeschreibung: Single-Player-Game-Plattform Pokeweb
 
-# Front
-- add deadState
-- add roundMsg
-- add loading screen
-- add Tui
-- styleHome
+## Überblick
+Eine skalierbare Single-Player-Game-Plattform, die mehrere Spieler gleichzeitig bedienen kann. Spieler interagieren unabhängig voneinander; Multiplayer-Interaktionen (z. B. gegeneinander spielen) sind derzeit nicht implementiert.
 
+## Technologie-Stack
+- **Backend**: Scala mit Play Framework, deployt auf Render in einem Docker-Container.
+- **Frontend**: Implementiert mit Vue.js, gebündelt durch Vite, deployt auf Vercel
 
-### Websockets
--upd gui is double called 
--> closed
+## Architektur
+### Stateless Architektur
+- Der Server verwaltet mehrere unabhängige Spielsitzungen mit nur einer Instanz des Spieles.
+- Spiellogik basiert auf einem JSON-basierten Game State, der zwischen Client und Server ausgetauscht wird.
 
--attacks switch and whatever are not accepted via json
-p-> fileIojson 441 , convert also attack choice,
-    -> game 214 call choice in controller
-    -> fileToJson doesnt work as it should
-    moves are not converted
-    -> jsonToAttackChoice, and jsonToSwitchChoice
-    looked up for non existent entry
-    -> mAybe setCurrentMove too?
-    -> solved, but ausbaufägif
-    -> same for opponent!
-    
+### Backend-Integration
+- Der Server nutzt eine **Fat JAR**, die ein zuvor implementiertes Pokemon Spiel enthält.
+- Dieses Spiel folgt einer strikten MVC-Architektur und macht umfangreichen Gebrauch von Entwurfsmustern, darunter:
+  - **Observer Pattern**: Zur Implementierung von Zustandsänderungen und Benachrichtigungen.
+  - **State Pattern**: Für die Verwaltung verschiedener Spielzustände.
+  - **Strategy Pattern**: Zur dynamischen Anpassung von Spielmechaniken.
+  - **Chain of Responsibility Pattern**: Für die Verarbeitung von Aktionen und Ereignissen.
 
+### Game State Management
+- Der Client sendet manipulierte JSON-Objekte zurück an den Server.
+- Der Server berechnet den neuen Spielstatus und übermittelt ihn an den Client.
 
--add Events to Controller inorder to make websocket in Server controller reactable
--> made controller an Observer
--> added Controller to ObserverList
-->Closed as of now
+### Grafiken
+- Sprites (Spielgrafiken) werden über eine öffentliche Drittanbieter-API direkt vom Client abgerufen.
 
--fix page reload issue. When reloading the page data that is dependent on websocket is lost. fix most likely in WebSocketManager Class itself;
-->Switch to SPA arch
-->delayed til vue
+## Vorteile der Umsetzung
+- **Effizienz**: Eine einzige Serverinstanz kann mehrere Spieler-Sitzungen gleichzeitig verwalten.
+- **Skalierbarkeit**: Dank der Stateless-Architektur kann die Plattform leicht erweitert werden.
+- **Flexibilität**: Der JSON-basierte Ansatz ermöglicht eine einfache Manipulation und Erweiterung des Game States.
 
--finish Json manipulator class
-
-### Websockets Bonus
--add a test
-
-Tui: Server to client
-main -> choice -> attack . move
-att  -> choice -> attack . move
-be   -> choice -> attack . updMove
-
-Gui: Server to client
-main _> choice empty
-att -> choice empty
-be  -> choice empty
-
-Gui: Client to Server
-be -> choice correctly populated
-
-
-
-####
-https://www.youtube.com/watch?v=JR1OjCoWzEs
-
-
-####
-team x is using UML Diagramms. theyre saying it helps them think better, reduces work time and makes teamwork easier.
-
-
-
-
+## Deployment
+- Die Plattform ist in einem Docker-Container verpackt und auf Render deployt, was eine einfache Bereitstellung und Wartung ermöglicht.
