@@ -1,6 +1,16 @@
-<script></script>
+<script>
+export default {
+    props: {
+        msg: {
+            type: String, 
+            required: false
+        }
+    }
+};
+</script>
 <template>
-    <div class="round-msg">What will you do</div>
+    <div v-if="msg" class="round-msg">{{ msg }}</div>
+    <div v-else class="round-msg">What will you do?</div>
 </template>
 
 <style>
