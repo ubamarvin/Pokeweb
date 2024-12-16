@@ -43,7 +43,10 @@ onMounted(() => {
 </script>
 <template>
     <div class="gui-container">
-        <div v-if="!gameJson">Loading data</div>
+        <div v-if="!gameJson" class="loading-container">
+            <div class="spinner"></div>
+            <p class="txt">Can take up to 50 seconds, server is waking up...</p>
+        </div>
 
         <component v-else :is="currentComp" :game-data="gameJson" />
     </div>
@@ -54,8 +57,43 @@ onMounted(() => {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Courier New', Courier, monospace; /* Monospace font for terminal look */
+    font-family: 'Courier New', Courier, monospace;
 
+}
+.loading-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+
+.spinner {
+    width: 40px;
+    height: 40px;
+    border: 4px solid rgba(0, 0, 0, 0.1);
+    border-top: 4px solid #007bff;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin-bottom: 10px;
+}
+
+.txt {
+    font-size: large;
+    color: white;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
 }
 
 .hamburger-button {
