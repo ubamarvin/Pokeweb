@@ -56,6 +56,13 @@ class WebSocketManager {
                 this.eventBuffer = [];
             }
         }
+        reconnect() {
+            setTimeout(() => {
+                console.log("Reconnecting to WebSocket...");
+                this.socket = new WebSocket(this.socket.url);
+                this.init();
+            }, 3000); // Retry after 3 seconds
+        }
 
         removeListener() {
             this.listener = null;
