@@ -1,19 +1,25 @@
 <script setup>
-import ImageContainer from './ImageContainer/ImageContainer.vue';
+//import ImageContainer from './ImageContainer/ImageContainer.vue';
 /**
  * At this point, usePokemonStore.fetchAllPokemons is already called
  */
-import { usePokemonStore } from '@/stores/pokeapifetcher/pokemonStore';
-const pokemonStore = usePokemonStore();
+//import { usePokemonStore } from '@/stores/pokeapifetcher/pokemonStore';
+//const pokemonStore = usePokemonStore();
 </script>
 <template>
-    <div class="Home-Container">
-      <ImageContainer
-      v-for="(pokemon, index) in pokemonStore.pokeData"
-      :key="index"
-      :src="pokemon.srcFront"
-      />
+  <div class="Home-Container">
+    <div>
+      <p>Welcome to the Pokebattle Simulator</p>
+      <p>The goal of the game is to beat the opponents Pokemon</p>
+      <p>At first you will be prompted to choose a Pokemon</p>
+      <p>Then the battle Starts!</p>
+      <p>Each round you can choose either to attack, switch out, or use an Item</p>
+      <p>Below you can see one of those Pokemons</p>
+      <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/1.png">
+      <p>Select the Gui to Start the game, have fun!</p>
     </div>
+  </div>
+    
 </template>
 <style>
 
@@ -94,14 +100,12 @@ const pokemonStore = usePokemonStore();
     text-align: center; /* Center text inside */
 
     width: 75vw;
-    height: 75vh;
+    height: 90vh;
     border-radius: 10px;
-    row-gap: 0px;
+    
 
     width: 100%;
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(75px, 1fr));
-    grid-template-rows: repeat(auto-fill, minmax(75px, 1fr));
+    
 }
 
 /*overall styles */
