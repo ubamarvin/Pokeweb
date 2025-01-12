@@ -89,7 +89,7 @@ const hideMoveDescription = () => {
 
 .move p {
     color: white;
-    font-size: large
+    font-size: 30px;
 }
 
 

@@ -3,10 +3,14 @@
 //Achieved by: Singleton Pattern
 //import {updateGui} from "./gui.js";
 
+const path = "wss://pokeweb-cvt9.onrender.com/socket"
+//const path = "ws://localhost:9000/socket"
+
+
 class WebSocketManager {
     constructor() {
         if (!WebSocketManager.instance) {
-            this.socket = new WebSocket("wss://pokeweb-cvt9.onrender.com/socket");
+            this.socket = new WebSocket(path);
             this.init();
             this.handleMessage
             this.eventBuffer = [];

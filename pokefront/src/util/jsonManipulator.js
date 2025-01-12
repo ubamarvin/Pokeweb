@@ -68,8 +68,8 @@ class JsonManipulator {
 
 
         
-        if (picks >= 1) {
-            console.log("Picks >= 1")
+        if (picks >= 2) {
+            console.log("Picks >= 2")
             data.state.type = "MainState";
             data.state["roundReport"] = "";
             let currentPokemon = data.state.player.pokemons.shift();

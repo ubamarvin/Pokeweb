@@ -8,13 +8,22 @@ import { RouterLink, RouterView } from 'vue-router'
 import { usePokemonStore } from '../../stores/pokeapifetcher/pokemonStore.js';
 const pokemonStore = usePokemonStore();
 pokemonStore.getPokeData()
+defineProps ({
+  onLogout: {
+    type: Function,
+    required: true
+  }
+});
 </script>
 <template>
     <header>
       <div class="wrapper">
-        <button class="btn btn-primary hamburger-button" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasMenu" aria-controls="offcanvasMenu">
+        <div class="hamburger-btn-wrapper">
+          <button class="btn btn-primary hamburger-button btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasMenu" aria-controls="offcanvasMenu">
           <span class="me-2">☰</span> 
         </button>
+        <button @click="onLogout" class="logout-btn btn">Logout</button>
+        </div>
   
         <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasMenu" aria-labelledby="offcanvasMenuLabel">
           <div class="offcanvas-header">
@@ -39,7 +48,14 @@ pokemonStore.getPokeData()
     </header>
       <RouterView class ="Content"/>
   </template>
-  <style>
+<style>
+
+.hamburger-btn-wrapper {
+  display: flex;
+  justify-content: space-between;
+  background-color: black;
+
+}
 
 .Content {
     flex: 1;
